@@ -214,11 +214,13 @@ footer.light-footer a {
 
 .breadcrumbs,
 .breadcrumb {
-    color: #444;
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.breadcrumbs a {
-    color: #1a5f7a;
+.breadcrumbs a,
+.breadcrumb a,
+.breadcrumb ol li a {
+    color: rgba(255, 255, 255, 0.55);
 }
 
 /* ==========================================

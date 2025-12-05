@@ -4480,6 +4480,54 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 10px;
 }
 
+.breadcrumb {
+    margin-bottom: 16px;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+
+.breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb ol li {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.breadcrumb ol li::after {
+    content: "›";
+    margin-left: 8px;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 11px;
+}
+
+.breadcrumb ol li:last-child::after {
+    display: none;
+}
+
+.breadcrumb ol li a {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb ol li a:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.breadcrumb ol li[aria-current="page"] {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
 .hero-title {
     font-family: var(--font-primary);
     font-size: 48px;

@@ -52,6 +52,18 @@ The system is designed as a "Digital Concierge" with a "WhatsApp-First Architect
 
 ## Recent Changes (December 2025)
 
+**Sensitive Page UX Improvements - December 5, 2025:**
+- Death certificate page hero restructured for empathy-first approach
+- Added `.hero-empathy-note` component with subtle styling (light overlay, left border accent)
+- Reduced CTAs from two competing buttons to single WhatsApp primary + text call link secondary
+- New CSS classes: `.hero-empathy-note`, `.hero-cta-single`, `.hero-cta-secondary`
+- Pattern available for other sensitive pages (divorce, etc.) if needed
+
+**Breadcrumb UX Fix - December 5, 2025:**
+- Breadcrumbs restyled from blue links to muted gray (12px, 55% opacity)
+- Applied sitewide across 40+ pages
+- H1 titles now properly dominate visual hierarchy
+
 **CI/CD & Form Enhancements - December 5, 2025:**
 - Enhanced contact.html form with Document Type dropdown (Birth Certificate, Marriage, Degree, POA, Corporate, Contracts, Golden Visa, Medical, PCC, Other)
 - Added form result container for success/error messages

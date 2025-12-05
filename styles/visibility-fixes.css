@@ -1,0 +1,283 @@
+/* ============================================
+   COMPREHENSIVE VISIBILITY FIXES
+   Ensures text is readable on all backgrounds
+   ============================================ */
+
+/* ==========================================
+   NAVIGATION - DARK GLASS WITH WHITE TEXT
+   ========================================== */
+
+/* Dark glassmorphism navigation - white text throughout */
+.header-desktop.exodus-header .nav-link,
+.header-desktop.exodus-header .logo-text,
+.header-desktop.exodus-header .logo-suffix,
+.header-desktop.exodus-header .logo-domain {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header-desktop.exodus-header .logo-tagline {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Scrolled state - same white text, stronger shadow */
+.header-desktop.exodus-header.scrolled .nav-link,
+.header-desktop.exodus-header.scrolled .logo-text {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   DROPDOWN MENUS - DARK GLASS WITH WHITE TEXT
+   ========================================== */
+
+.dropdown-menu,
+.nav-dropdown,
+.sub-menu {
+    background: rgba(14, 43, 72, 0.95) !important;
+    backdrop-filter: blur(24px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.dropdown-menu li a,
+.nav-dropdown li a,
+.sub-menu li a {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu li a:hover,
+.nav-dropdown li a:hover,
+.sub-menu li a:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* ==========================================
+   MOBILE MENU - DARK GLASS WITH WHITE TEXT
+   ========================================== */
+
+.sidebar-menu,
+.mobile-menu,
+#menu-sidebar {
+    background: rgba(14, 43, 72, 0.98) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+}
+
+.sidebar-nav a,
+.sidebar-menu a,
+.mobile-menu a {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-brand-name,
+.sidebar-tagline {
+    color: #ffffff !important;
+}
+
+.brand-suffix {
+    color: #ffffff !important;
+}
+
+/* ==========================================
+   BUTTONS - ENSURE PROPER CONTRAST
+   ========================================== */
+
+/* Primary buttons - white text on solid color is OK */
+.btn-primary,
+.pricing-cta,
+.card-cta-enhanced {
+    background: #1a5f7a;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.pricing-cta:hover {
+    color: #ffffff !important;
+}
+
+/* Secondary buttons - dark text on transparent/light background */
+.btn-secondary {
+    background: transparent;
+    color: #1a5f7a !important;
+    border: 2px solid #1a5f7a;
+}
+
+.btn-secondary:hover {
+    background: #1a5f7a;
+    color: #ffffff !important;
+}
+
+/* WhatsApp buttons - white text on green is OK */
+.btn-whatsapp,
+.mobile-action-btn--whatsapp,
+.footer-whatsapp {
+    background: #25D366;
+    color: #ffffff !important;
+}
+
+.btn-whatsapp:hover {
+    color: #ffffff !important;
+}
+
+/* ==========================================
+   HERO SECTIONS - CONDITIONAL
+   ========================================== */
+
+/* If hero has dark overlay, white text is OK */
+.services-hero {
+    /* This section has no overlay, so text should be dark */
+    color: #1a1a1a;
+}
+
+.hero-badge {
+    background: linear-gradient(135deg, #1a5f7a 0%, #2d8fb8 100%);
+    color: #ffffff; /* White on dark gradient is OK */
+}
+
+.title-main {
+    color: #1a1a1a !important;
+}
+
+.hero-subtitle {
+    color: #444 !important;
+}
+
+/* ==========================================
+   PRICING CARDS
+   ========================================== */
+
+.pricing-tier-name,
+.pricing-tier-tagline,
+.pricing-features li {
+    color: #1a1a1a;
+}
+
+.pricing-cta {
+    background: #1a5f7a;
+    color: #ffffff !important;
+}
+
+.pricing-card.featured .pricing-cta {
+    background: #10B981;
+    color: #ffffff !important;
+}
+
+/* ==========================================
+   SERVICE CARDS
+   ========================================== */
+
+.card-title-enhanced,
+.card-description-enhanced,
+.card-features-enhanced li {
+    color: #1a1a1a;
+}
+
+.service-card-enhanced .card-description-enhanced {
+    color: #555;
+}
+
+/* ==========================================
+   ACCORDIONS
+   ========================================== */
+
+.accordion-title {
+    color: #1a1a1a !important;
+}
+
+.accordion-content {
+    color: #444;
+}
+
+/* ==========================================
+   FOOTER - IF LIGHT BACKGROUND
+   ========================================== */
+
+/* Most footers are dark, so white text is OK */
+/* If you have a light footer, uncomment this: */
+/*
+footer.light-footer {
+    background: #f8f9fa;
+    color: #1a1a1a;
+}
+
+footer.light-footer a {
+    color: #1a5f7a;
+}
+*/
+
+/* ==========================================
+   BREADCRUMBS & MISC
+   ========================================== */
+
+.breadcrumbs,
+.breadcrumb {
+    color: #444;
+}
+
+.breadcrumbs a {
+    color: #1a5f7a;
+}
+
+/* ==========================================
+   ENSURE DARK GLASS BACKGROUND
+   ========================================== */
+
+/* Ensure dark glassmorphism is applied */
+.header-desktop.exodus-header {
+    /* Already handled by navigation-glassmorphism.css */
+    /* This is just a safety net */
+    background: rgba(14, 43, 72, 0.85) !important;
+}
+
+/* ==========================================
+   TEXT SHADOWS FOR EXTRA READABILITY
+   ========================================== */
+
+/* Dark shadow on white text for depth */
+.header-desktop.exodus-header .nav-link,
+.header-desktop.exodus-header .logo-text {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   MOBILE SPECIFIC FIXES
+   ========================================== */
+
+@media (max-width: 1024px) {
+    /* Mobile menu text is white on dark glass */
+    .sidebar-menu a,
+    .mobile-menu a {
+        color: #ffffff !important;
+    }
+    
+    /* Mobile hamburger icon is white on dark glass */
+    .hamburger-line,
+    .menu-toggle-line {
+        background: #ffffff !important;
+    }
+}
+
+/* ==========================================
+   DARK MODE OVERRIDES
+   ========================================== */
+
+@media (prefers-color-scheme: dark) {
+    /* In dark mode, use pure black glass */
+    .header-desktop.exodus-header {
+        background: rgba(10, 10, 10, 0.85) !important;
+    }
+    
+    .header-desktop.exodus-header.scrolled {
+        background: rgba(10, 10, 10, 0.95) !important;
+    }
+    
+    /* White text remains the same */
+    .header-desktop.exodus-header .nav-link,
+    .header-desktop.exodus-header .logo-text {
+        color: #ffffff !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+}

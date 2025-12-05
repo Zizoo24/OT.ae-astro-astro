@@ -1,0 +1,50 @@
+# Robots.txt for OnlineTranslation.ae
+# https://onlinetranslation.ae
+
+User-agent: *
+Allow: /
+
+# Priority Crawl Paths (Money Pages)
+# Services - High Priority
+Allow: /services/legal-translation/
+Allow: /services/golden-visa-translation/
+Allow: /services/attestation/
+Allow: /services/certificate-translation/
+Allow: /services/corporate-translation/
+
+# Personal Documents - High Priority
+Allow: /personal/vital-records/birth/
+Allow: /personal/vital-records/marriage/
+Allow: /personal/immigration/pcc/
+Allow: /personal/immigration/bank/
+Allow: /personal/academic/degree/
+
+# Legal Documents - High Priority
+Allow: /legal/corporate/poa/
+Allow: /legal/corporate/moa/
+Allow: /legal/contracts/nda/
+
+# Locations - High Priority
+Allow: /locations/dubai/
+Allow: /locations/dubai/palm-jumeirah/
+Allow: /locations/dubai/jlt/
+Allow: /locations/dubai/difc/
+
+# Resources
+Allow: /resources/pricing-guide/
+Allow: /resources/faq/
+Allow: /resources/golden-visa-checklist/
+
+# Sitemaps
+Sitemap: https://onlinetranslation.ae/sitemap.xml
+
+# Block sensitive paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+
+# Allow important resources
+Allow: /styles/*.css
+Allow: /scripts/*.js
+Allow: /images/
+Allow: /manifest.webmanifest

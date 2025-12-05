@@ -1,0 +1,167 @@
+.os-macos {
+    --os-font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif;
+    --os-radius: 10px;
+}
+
+.os-macos body {
+    font-family: var(--os-font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.os-macos .hero-title,
+.os-macos .section-header h2,
+.os-macos h1, .os-macos h2, .os-macos h3 {
+    font-family: var(--os-font);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.os-macos .btn-coral,
+.os-macos .btn-outline,
+.os-macos .btn-primary {
+    border-radius: var(--os-radius);
+    font-family: var(--os-font);
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.os-macos .btn-coral:hover,
+.os-macos .btn-outline:hover {
+    transform: translateY(-2px);
+}
+
+.os-macos .btn-coral:active,
+.os-macos .btn-outline:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.os-macos .service-card,
+.os-macos .channel-card,
+.os-macos .stat-card,
+.os-macos .feature-card,
+.os-macos .why-card {
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 0.5px solid rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.os-macos .service-card:hover,
+.os-macos .feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(10, 31, 68, 0.12);
+}
+
+.os-macos .header-desktop {
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.os-macos .header-desktop.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.os-macos .sidebar-menu {
+    background: rgba(242, 242, 247, 0.95);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.os-macos .sidebar-nav a {
+    border-radius: 8px;
+    font-family: var(--os-font);
+    transition: background 0.15s ease;
+}
+
+.os-macos .sidebar-nav a:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.os-macos input,
+.os-macos textarea,
+.os-macos select {
+    border-radius: 8px;
+    font-family: var(--os-font);
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.os-macos input:focus,
+.os-macos textarea:focus,
+.os-macos select:focus {
+    border-color: #0a1f44;
+    box-shadow: 0 0 0 3px rgba(10, 31, 68, 0.1);
+    outline: none;
+}
+
+.os-macos .footer-section {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.os-macos ::-webkit-scrollbar {
+    width: 12px;
+}
+
+.os-macos ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.os-macos ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+.os-macos ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.35);
+    background-clip: content-box;
+}
+
+.os-macos .menu-toggle-btn {
+    border-radius: 8px;
+    transition: background 0.15s ease;
+}
+
+.os-macos .menu-toggle-btn:hover {
+    background: rgba(10, 31, 68, 0.08);
+}
+
+.os-macos .quick-contact-btn,
+.os-macos .header-actions a {
+    border-radius: 10px;
+}
+
+.os-macos .testimonial-card {
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.os-macos .faq-item {
+    border-radius: 10px;
+}
+
+.os-macos .pricing-card {
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.os-macos .process-step {
+    border-radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .os-macos.theme-auto .header-desktop {
+        background: rgba(30, 30, 30, 0.85);
+    }
+    
+    .os-macos.theme-auto .sidebar-menu {
+        background: rgba(44, 44, 46, 0.95);
+    }
+}

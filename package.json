@@ -1,0 +1,27 @@
+{
+  "name": "onlinetranslation-ae",
+  "version": "1.0.0",
+  "description": "MOJ Certified Legal Translation Services Dubai - Digital Concierge Platform",
+  "type": "module",
+  "author": "OnlineTranslation.ae",
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "https://onlinetranslation.ae",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zizoo24/onlinetranslation-dubai"
+  },
+  "keywords": [
+    "legal-translation",
+    "dubai",
+    "moj-certified",
+    "arabic-translation",
+    "document-translation"
+  ],
+  "scripts": {
+    "start": "python server.py",
+    "build:sitemap": "node scripts/generate-sitemap.mjs",
+    "check": "npm run build:sitemap",
+    "test": "echo \"Static site - no tests\""
+  }
+}

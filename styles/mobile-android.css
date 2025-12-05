@@ -1,0 +1,321 @@
+@media (max-width: 991px) {
+    .os-android {
+        --os-font: "Roboto", "Google Sans", sans-serif;
+        --os-radius: 8px;
+        --os-nav-height: 64px;
+        --md-elevation-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        --md-elevation-2: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
+        --md-elevation-3: 0 10px 20px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.10);
+    }
+
+    .os-android .footer-bar {
+        height: var(--os-nav-height);
+        background: #ffffff;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+        border-top: none;
+    }
+
+    .os-android .footer-item {
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px 12px;
+        font-family: var(--os-font);
+        font-size: 12px;
+        font-weight: 500;
+        color: #5f6368;
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+        border-radius: 0;
+    }
+
+    .os-android .footer-item::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(227, 30, 36, 0.12);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.4s ease, height 0.4s ease;
+    }
+
+    .os-android .footer-item:active::before {
+        width: 120px;
+        height: 120px;
+    }
+
+    .os-android .footer-item.active-nav {
+        color: #e31e24;
+        background: transparent;
+    }
+
+    .os-android .footer-item.active-nav::before {
+        display: none;
+    }
+
+    .os-android .footer-item.active-nav::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 32px;
+        height: 3px;
+        background: #e31e24;
+        border-radius: 3px 3px 0 0;
+    }
+
+    .os-android .footer-item i {
+        font-size: 22px;
+    }
+
+    .os-android .hero-section {
+        padding-top: 90px;
+        padding-bottom: 100px;
+    }
+
+    .os-android .hero-title {
+        font-family: var(--os-font);
+        font-weight: 500;
+        letter-spacing: 0;
+    }
+
+    .os-android .hero-subtitle {
+        font-family: var(--os-font);
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .os-android .btn-coral,
+    .os-android .btn-outline {
+        border-radius: var(--os-radius);
+        font-family: var(--os-font);
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding: 14px 24px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: var(--md-elevation-1);
+        transition: box-shadow 0.2s ease;
+    }
+
+    .os-android .btn-coral:active,
+    .os-android .btn-outline:active {
+        box-shadow: var(--md-elevation-3);
+    }
+
+    .os-android .btn-coral::after,
+    .os-android .btn-outline::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    .os-android .btn-coral:active::after,
+    .os-android .btn-outline:active::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    .os-android .service-card:not(.accent),
+    .os-android .channel-card,
+    .os-android .stat-card {
+        border-radius: var(--os-radius);
+        background: #ffffff;
+        border: none;
+        box-shadow: var(--md-elevation-1);
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .os-android .service-card.accent {
+        border-radius: var(--os-radius);
+        border: none;
+        box-shadow: var(--md-elevation-1);
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .os-android .service-card:active,
+    .os-android .channel-card:active {
+        box-shadow: var(--md-elevation-2);
+        transform: translateY(-2px);
+    }
+
+    .os-android .sidebar-menu {
+        background: #ffffff;
+        box-shadow: var(--md-elevation-3);
+    }
+
+    .os-android .sidebar-menu a {
+        border-radius: 0;
+        font-family: var(--os-font);
+        font-weight: 500;
+        font-size: 14px;
+        padding: 16px 24px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .os-android .sidebar-menu a::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0;
+        height: 0;
+        background: rgba(227, 30, 36, 0.08);
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: width 0.4s ease, height 0.4s ease;
+    }
+
+    .os-android .sidebar-menu a:active::before {
+        width: 400px;
+        height: 100px;
+    }
+
+    .os-android .header-mobile {
+        background: #ffffff;
+        box-shadow: var(--md-elevation-1);
+        border-bottom: none;
+    }
+
+    .os-android .quick-quote {
+        border-radius: 16px;
+        background: #ffffff;
+        box-shadow: var(--md-elevation-2);
+    }
+
+    .os-android .section-header h2 {
+        font-family: var(--os-font);
+        font-weight: 500;
+        letter-spacing: 0;
+    }
+
+    .os-android .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        bottom: calc(var(--os-nav-height) + 16px);
+        box-shadow: var(--md-elevation-2);
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .os-android .whatsapp-float:active {
+        box-shadow: var(--md-elevation-3);
+        transform: scale(1.05);
+    }
+
+    .os-android input,
+    .os-android textarea,
+    .os-android select {
+        border-radius: 4px;
+        font-family: var(--os-font);
+        padding: 16px;
+        border: 1px solid #dadce0;
+        background: #ffffff;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .os-android input:focus,
+    .os-android textarea:focus {
+        border-color: #e31e24;
+        box-shadow: 0 0 0 2px rgba(227, 30, 36, 0.2);
+    }
+
+    .os-android .trust-badges,
+    .os-android .stats-grid {
+        gap: 16px;
+    }
+
+    .os-android .trust-badge,
+    .os-android .stat-card {
+        padding: 16px;
+        border-radius: var(--os-radius);
+        box-shadow: var(--md-elevation-1);
+    }
+
+    .os-android .page-hero {
+        padding-top: 80px;
+    }
+
+    .os-android .mobile-header {
+        background: #ffffff;
+        box-shadow: var(--md-elevation-1);
+        border-bottom: none;
+    }
+
+    .os-android .mobile-menu-toggle {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .os-android .mobile-menu-toggle::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(0, 0, 0, 0.08);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s ease, height 0.3s ease;
+    }
+
+    .os-android .mobile-menu-toggle:active::before {
+        width: 60px;
+        height: 60px;
+    }
+
+    .os-android .android-fab {
+        position: fixed;
+        right: 16px;
+        bottom: calc(var(--os-nav-height) + 80px);
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        background: #e31e24;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--md-elevation-2);
+        z-index: 100;
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .os-android .android-fab:active {
+        box-shadow: var(--md-elevation-3);
+        transform: scale(1.05);
+    }
+
+    .os-android .android-fab i {
+        font-size: 24px;
+    }
+
+    .os-android .cta-section {
+        border-radius: 0;
+        box-shadow: var(--md-elevation-2);
+    }
+
+    .os-android .md-ripple {
+        position: relative;
+        overflow: hidden;
+    }
+}

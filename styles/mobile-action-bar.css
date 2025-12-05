@@ -1,0 +1,154 @@
+/* ========================================
+   MOBILE BOTTOM ACTION BAR
+   Replaces floating WhatsApp CTA
+   ======================================== */
+
+.mobile-action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: none; /* Hidden by default, shown on mobile */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    padding-bottom: env(safe-area-inset-bottom); /* iPhone notch safe */
+}
+
+.mobile-action-bar-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 64px;
+}
+
+.mobile-action-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #555;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    min-height: 44px; /* Touch target */
+    padding: 8px 4px;
+}
+
+.mobile-action-btn:active {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.mobile-action-btn-icon {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.mobile-action-btn-text {
+    font-size: 10px;
+    line-height: 1;
+}
+
+/* WhatsApp button - primary action */
+.mobile-action-btn--whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.mobile-action-btn--whatsapp:active {
+    background: #22c55e;
+}
+
+/* Call button */
+.mobile-action-btn--call {
+    color: #3B82F6;
+}
+
+/* Upload/Send docs button */
+.mobile-action-btn--upload {
+    color: #8B5CF6;
+}
+
+/* Show only on mobile */
+@media (max-width: 1024px) {
+    .mobile-action-bar {
+        display: block;
+    }
+    
+    /* Add padding to body to prevent content being hidden */
+    body {
+        padding-bottom: calc(64px + env(safe-area-inset-bottom));
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 375px) {
+    .mobile-action-bar-container {
+        height: 56px;
+    }
+    
+    .mobile-action-btn-text {
+        font-size: 9px;
+    }
+    
+    .mobile-action-btn-icon {
+        font-size: 18px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .mobile-action-bar {
+        background: rgba(26, 26, 26, 0.95);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-action-btn {
+        color: #e0e0e0;
+    }
+    
+    .mobile-action-btn:active {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Hide on desktop */
+@media (min-width: 1025px) {
+    .mobile-action-bar {
+        display: none !important;
+    }
+    
+    body {
+        padding-bottom: 0 !important;
+    }
+}
+
+/* ========================================
+   REMOVE FLOATING WHATSAPP BUTTON
+   Replaced by bottom action bar
+   ======================================== */
+
+.whatsapp-float {
+    display: none !important;
+}
+
+/* Override OS-specific floating buttons */
+.os-ios .whatsapp-float,
+.os-android .whatsapp-float {
+    display: none !important;
+}

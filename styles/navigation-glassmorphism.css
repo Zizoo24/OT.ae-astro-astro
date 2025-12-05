@@ -1,0 +1,120 @@
+/* ========================================
+   DARK GLASSMORPHISM NAVIGATION
+   Premium dark glass with white text
+   ======================================== */
+
+/* Dark glassmorphism - initial state */
+.header-desktop.exodus-header {
+    /* Dark glass effect with blur */
+    background: rgba(14, 43, 72, 0.85) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Scrolled state - stronger dark glass */
+.header-desktop.exodus-header.scrolled {
+    background: rgba(14, 43, 72, 0.95) !important;
+    backdrop-filter: blur(24px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* White text on dark glass background */
+.header-desktop.exodus-header .nav-link {
+    color: #ffffff !important;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header-desktop.exodus-header .logo-text,
+.header-desktop.exodus-header .logo-text .logo-suffix {
+    color: #ffffff !important;
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header-desktop.exodus-header .logo-domain {
+    color: #ffffff !important;
+}
+
+.header-desktop.exodus-header .logo-tagline {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 600;
+}
+
+/* Announcement bar text - already white on red, keep it */
+.header-desktop.exodus-header .announcement-label {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown arrows - white */
+.header-desktop.exodus-header .nav-link i {
+    color: #ffffff !important;
+}
+
+/* Nav link hover - lighter white */
+.header-desktop.exodus-header .nav-link:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Dropdown menu - dark glass to match nav */
+.dropdown-menu {
+    background: rgba(14, 43, 72, 0.95) !important;
+    backdrop-filter: blur(24px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
+    border-radius: 8px !important;
+}
+
+.dropdown-menu li a {
+    color: #ffffff !important;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* Scrolled state - same white text, just stronger background */
+.header-desktop.exodus-header.scrolled .nav-link,
+.header-desktop.exodus-header.scrolled .logo-text,
+.header-desktop.exodus-header.scrolled .logo-tagline {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Smooth transitions */
+.header-desktop.exodus-header,
+.header-desktop.exodus-header .nav-link,
+.header-desktop.exodus-header .logo-text,
+.header-desktop.exodus-header .logo-tagline {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark mode support - already dark, just adjust slightly */
+@media (prefers-color-scheme: dark) {
+    .header-desktop.exodus-header {
+        background: rgba(10, 10, 10, 0.85) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .header-desktop.exodus-header.scrolled {
+        background: rgba(10, 10, 10, 0.95) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+    .header-desktop.exodus-header {
+        backdrop-filter: blur(12px) saturate(180%) !important;
+        -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+    }
+}

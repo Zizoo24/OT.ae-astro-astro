@@ -1,0 +1,236 @@
+# OnlineTranslation Dubai - GitHub Raw Links
+# Repository: https://github.com/Zizoo24/onlinetranslation-dubai
+# Base URL: https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/
+
+================================================================================
+ROOT FILES
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/contact.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/privacy.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/terms.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/404.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/robots.txt
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/sitemap.xml
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/manifest.webmanifest
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/service-worker.js
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/vercel.json
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/browserconfig.xml
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/favicon.ico
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/package.json
+
+================================================================================
+SCRIPTS (7 files)
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/scripts/main.js
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/scripts/navigation.js
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/scripts/os-detect.js
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/scripts/form-handler.js
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/scripts/search-index.js
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/scripts/subsection-menu.js
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/scripts/image-optimization.js
+
+================================================================================
+STYLES (12 files)
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/porto-desktop.css
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/sticky-mobile.css
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/mobile-ios.css
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/mobile-android.css
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/desktop-macos.css
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/dark-mode.css
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/subsection-menu.css
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/mobile-action-bar.css
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/navigation-glassmorphism.css
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/print.css
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/services-enhanced.css
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/styles/visibility-fixes.css
+
+================================================================================
+HTML PAGES - Legal & Corporate
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/legal/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/legal/contracts/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/legal/contracts/nda/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/legal/corporate/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/legal/corporate/moa/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/legal/corporate/poa/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/legal/litigation/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/legal-translation-dubai/index.html
+
+================================================================================
+HTML PAGES - Personal & Civil
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/personal/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/personal/academic/degree/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/personal/academic/transcripts/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/personal/immigration/bank/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/personal/immigration/license/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/personal/immigration/pcc/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/personal/vital-records/birth/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/personal/vital-records/death/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/personal/vital-records/divorce/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/personal/vital-records/marriage/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/personal-documents/index.html
+
+================================================================================
+HTML PAGES - Services
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/services/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/services/attestation/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/services/certificate-translation/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/services/corporate-translation/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/services/golden-visa-translation/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/services/legal-translation/index.html
+
+================================================================================
+HTML PAGES - Industries
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/industries/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/industries/e-commerce/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/industries/healthcare/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/industries/legal/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/industries/real-estate/index.html
+
+================================================================================
+HTML PAGES - Locations
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/locations/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/locations/abu-dhabi/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/locations/dubai/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/locations/dubai/business-bay/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/locations/dubai/difc/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/locations/dubai/jlt/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/locations/dubai/palm-jumeirah/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/locations/sharjah/index.html
+
+================================================================================
+HTML PAGES - Resources
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/resources/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/resources/attestation-guide/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/resources/document-checklist/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/resources/faq/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/resources/golden-visa-checklist/index.html
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/resources/pricing-guide/index.html
+
+================================================================================
+HTML PAGES - Specialized
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/specialized/medical/index.html
+
+================================================================================
+IMAGES - Icons
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/favicon-16.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/favicon-32.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/favicon-48.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/favicon-64.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/favicon.svg
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/icon-72.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/icon-96.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/icon-128.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/icon-144.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/icon-152.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/icon-192.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/icon-384.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/icon-512.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/phone-icon.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/icons/whatsapp-icon.png
+
+================================================================================
+IMAGES - Logo Brand
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/brand/emblem-48.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/brand/emblem-64.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/brand/emblem-96.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/brand/emblem-128.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/brand/emblem-256.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/brand/emblem-512.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/brand/emblem-clean.png
+
+================================================================================
+IMAGES - Logo Optimized
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/optimized/logo-footer.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/optimized/logo-footer.webp
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/optimized/logo-footer-hq.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/optimized/logo-header.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/optimized/logo-header.webp
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/optimized/logo-header-hq.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/optimized/logo-large.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/optimized/logo-square-128.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/optimized/logo-square-256.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/optimized/sidebar-logo-512.png
+
+================================================================================
+IMAGES - Logo Root
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/logo-glow.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/logo-nobg.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/logo-transparent.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/onedrive-logo.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/sidebar-logo.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/logo/sidebar-logo-hq.png
+
+================================================================================
+IMAGES - OneDrive Hero
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/hero/city-cyber.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/hero/cyber-smith.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/hero/medical-cyber.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/hero/office-team.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/hero/ot-man.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/hero/technical-translation.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/hero/vis-translation.png
+
+================================================================================
+IMAGES - OneDrive Locations
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/locations/palm-jumeirah.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/locations/sharjah.png
+
+================================================================================
+IMAGES - OneDrive Services
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/services/services-1.jpg
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/services/services-2.jpg
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/services/services-3.jpg
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/services/services-4.jpg
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/services/services-5.jpg
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/services/services-6.jpg
+
+================================================================================
+IMAGES - OneDrive Tiles
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/tiles/tile-corporate.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/tiles/tile-courts.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/tiles/tile-immigration.png
+
+================================================================================
+IMAGES - OneDrive Root
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/contact-dxb.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/contact-office.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/emblem.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/logo-combo.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/stamped-hardcopy.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/stamped-hardcopy-2.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/steps-quote.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/steps-upload.png
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/onedrive/whatsapp-translation.png
+
+================================================================================
+IMAGES - Root
+================================================================================
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/hero-city.jpg
+https://raw.githubusercontent.com/Zizoo24/onlinetranslation-dubai/main/images/hero-team.jpg
+
+================================================================================
+TOTAL FILES: ~130
+- Root config: 13 files
+- Scripts: 7 files
+- Styles: 12 files
+- HTML pages: 46 files
+- Images: 65 files
+================================================================================

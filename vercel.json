@@ -1,0 +1,322 @@
+{
+  "redirects": [
+    {
+      "source": "/dubai-birth-certificate-translation/",
+      "destination": "/personal/vital-records/birth/",
+      "permanent": true
+    },
+    {
+      "source": "/certificate-marriage-translation/",
+      "destination": "/personal/vital-records/marriage/",
+      "permanent": true
+    },
+    {
+      "source": "/medical-reports-translation/",
+      "destination": "/specialized/medical/",
+      "permanent": true
+    },
+    {
+      "source": "/police-clearance-certificate-translation/",
+      "destination": "/personal/immigration/pcc/",
+      "permanent": true
+    },
+    {
+      "source": "/bank-statement-translation/",
+      "destination": "/personal/immigration/bank/",
+      "permanent": true
+    },
+    {
+      "source": "/driving-license-translation/",
+      "destination": "/personal/immigration/license/",
+      "permanent": true
+    },
+    {
+      "source": "/degree-certificate-translation/",
+      "destination": "/personal/academic/degree/",
+      "permanent": true
+    },
+    {
+      "source": "/power-of-attorney-translation/",
+      "destination": "/legal/corporate/poa/",
+      "permanent": true
+    },
+    {
+      "source": "/moa-translation/",
+      "destination": "/legal/corporate/moa/",
+      "permanent": true
+    },
+    {
+      "source": "/nda-translation/",
+      "destination": "/legal/contracts/nda/",
+      "permanent": true
+    },
+    {
+      "source": "/golden-visa-translation/",
+      "destination": "/services/golden-visa-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/legal-translation-services/",
+      "destination": "/services/legal-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/attestation-services/",
+      "destination": "/services/attestation/",
+      "permanent": true
+    },
+    {
+      "source": "/certificate-translation/",
+      "destination": "/services/certificate-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-translation/",
+      "destination": "/services/corporate-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/pricing/",
+      "destination": "/resources/pricing-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/",
+      "destination": "/resources/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/dubai-marriage-certificate-translation-certified-translations-for-visa-and-legal-use-outside-the-uae",
+      "destination": "/personal/vital-records/marriage/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/website-localization-translation",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/legal-translation/urgent-translation-services",
+      "destination": "/services/legal-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/about-2/umm-al-sheif/medical-document-translation-services-for-jumeirah-street",
+      "destination": "/specialized/medical/",
+      "permanent": true
+    },
+    {
+      "source": "/our-locations",
+      "destination": "/locations/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/swedish-arabic-official-translation",
+      "destination": "/services/certificate-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/about-2/umm-al-sheif",
+      "destination": "/locations/dubai/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/uk-birth-certificate-legal-translation-for-uae-visa-purposes",
+      "destination": "/personal/vital-records/birth/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/technical-translation",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/russian-to-arabic-translation-for-birth-certificates-visa-embassy-official",
+      "destination": "/personal/vital-records/birth/",
+      "permanent": true
+    },
+    {
+      "source": "/refund_returns",
+      "destination": "/terms.html",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translator-in-pocket",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/academic-translation",
+      "destination": "/personal/academic/degree/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/medical-translation-services",
+      "destination": "/specialized/medical/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/media-translation",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/legal-translation/financial-translation-services",
+      "destination": "/services/corporate-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/legal-translation/family-documents-translation",
+      "destination": "/personal/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/legal-translation",
+      "destination": "/services/legal-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/languages",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/educational-certificate-translation",
+      "destination": "/personal/academic/degree/",
+      "permanent": true
+    },
+    {
+      "source": "/dubai-birth-certificate-translation",
+      "destination": "/personal/vital-records/birth/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/criminal-record-certificate-translation-dubai",
+      "destination": "/personal/immigration/pcc/",
+      "permanent": true
+    },
+    {
+      "source": "/about-2/cookie-policy-br",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact-dxb-translator",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/to-arabic-translation-whatsapp-screenshots-english",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/service-worker.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://*.supabase.co https://www.google-analytics.com https://www.googletagmanager.com https://analytics.google.com; frame-ancestors 'none';"
+        }
+      ]
+    },
+    {
+      "source": "/styles/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/scripts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}

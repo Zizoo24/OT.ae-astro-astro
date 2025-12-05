@@ -1,0 +1,392 @@
+/* Document Pages Styles
+   Shared styles for document-specific pages (birth cert, marriage, etc.)
+   ========================================================================= */
+
+/* Accordion Sections */
+.document-page .accordion-section {
+    margin-bottom: 30px;
+}
+
+.document-page .accordion-item {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: var(--bg-white);
+}
+
+.document-page .accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    background: var(--bg-light);
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.document-page .accordion-header:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+.document-page .accordion-header i {
+    transition: transform 0.3s ease;
+}
+
+.document-page .accordion-item.active .accordion-header {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+.document-page .accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+.document-page .accordion-content {
+    display: none;
+    padding: 24px;
+    line-height: 1.8;
+}
+
+.document-page .accordion-item.active .accordion-content {
+    display: block;
+}
+
+/* Checklist Grid */
+.document-page .checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.document-page .checklist-card {
+    background: var(--bg-light);
+    padding: 24px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.document-page .checklist-card h4 {
+    margin-bottom: 12px;
+    color: var(--primary-color);
+    text-transform: none;
+}
+
+.document-page .checklist-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.document-page .checklist-card li {
+    padding: 8px 0;
+    padding-left: 28px;
+    position: relative;
+}
+
+.document-page .checklist-card li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.document-page .checklist-card li.warning::before {
+    content: '\f071';
+    color: #f39c12;
+}
+
+/* Step Process */
+.document-page .step-process {
+    counter-reset: step-counter;
+}
+
+.document-page .step-item {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.document-page .step-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.document-page .step-number {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.document-page .step-content h4 {
+    margin-bottom: 8px;
+    text-transform: none;
+    color: var(--primary-color);
+}
+
+/* Aftercare Section */
+.document-page .aftercare-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--text-light);
+    padding: 60px 0;
+    margin: 60px 0;
+}
+
+.document-page .aftercare-section h2 {
+    color: var(--text-light);
+}
+
+.document-page .aftercare-section .section-label {
+    color: var(--accent-color);
+}
+
+.document-page .aftercare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.document-page .aftercare-card {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.document-page .aftercare-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 16px;
+    text-transform: none;
+    font-size: 20px;
+}
+
+.document-page .aftercare-card p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 16px;
+}
+
+.document-page .aftercare-card ol {
+    padding-left: 20px;
+    color: rgba(255,255,255,0.9);
+}
+
+.document-page .aftercare-card li {
+    margin-bottom: 10px;
+}
+
+/* Pricing Tiers */
+.document-page .pricing-tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.document-page .pricing-tier {
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.document-page .pricing-tier:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.document-page .pricing-tier.featured {
+    border-color: var(--accent-color);
+    position: relative;
+}
+
+.document-page .pricing-tier.featured::before {
+    content: 'Most Popular';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: var(--text-light);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.document-page .pricing-tier h3 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    text-transform: none;
+}
+
+.document-page .pricing-tier .timeline {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 16px;
+}
+
+.document-page .pricing-tier ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.document-page .pricing-tier li {
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.document-page .pricing-tier li:last-child {
+    border-bottom: none;
+}
+
+.document-page .pricing-tier li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* FAQ Section */
+.document-page .faq-section details {
+    margin-bottom: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.document-page .faq-section summary {
+    padding: 18px 24px;
+    background: var(--bg-light);
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.document-page .faq-section summary::-webkit-details-marker {
+    display: none;
+}
+
+.document-page .faq-section summary .summary-indicator i {
+    transition: transform 0.3s ease;
+}
+
+.document-page .faq-section details[open] summary .summary-indicator i {
+    transform: rotate(180deg);
+}
+
+.document-page .faq-section .details-content {
+    padding: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .document-page .step-item {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .document-page .aftercare-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .document-page .pricing-tiers {
+        grid-template-columns: 1fr;
+    }
+    
+    .document-page .checklist-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Legacy class support - birth-cert-page maps to document-page */
+.birth-cert-page .accordion-section { margin-bottom: 30px; }
+.birth-cert-page .accordion-item { border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 12px; overflow: hidden; background: var(--bg-white); }
+.birth-cert-page .accordion-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; background: var(--bg-light); cursor: pointer; transition: var(--transition); border: none; width: 100%; text-align: left; font-family: var(--font-heading); font-size: 16px; font-weight: 600; color: var(--text-dark); }
+.birth-cert-page .accordion-header:hover { background: var(--primary-color); color: var(--text-light); }
+.birth-cert-page .accordion-header i { transition: transform 0.3s ease; }
+.birth-cert-page .accordion-item.active .accordion-header { background: var(--primary-color); color: var(--text-light); }
+.birth-cert-page .accordion-item.active .accordion-header i { transform: rotate(180deg); }
+.birth-cert-page .accordion-content { display: none; padding: 24px; line-height: 1.8; }
+.birth-cert-page .accordion-item.active .accordion-content { display: block; }
+.birth-cert-page .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 20px; }
+.birth-cert-page .checklist-card { background: var(--bg-light); padding: 24px; border-radius: 8px; border-left: 4px solid var(--accent-color); }
+.birth-cert-page .checklist-card h4 { margin-bottom: 12px; color: var(--primary-color); text-transform: none; }
+.birth-cert-page .checklist-card ul { list-style: none; padding: 0; margin: 0; }
+.birth-cert-page .checklist-card li { padding: 8px 0; padding-left: 28px; position: relative; }
+.birth-cert-page .checklist-card li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; color: var(--accent-color); }
+.birth-cert-page .checklist-card li.warning::before { content: '\f071'; color: #f39c12; }
+.birth-cert-page .step-process { counter-reset: step-counter; }
+.birth-cert-page .step-item { display: flex; gap: 24px; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--border-color); }
+.birth-cert-page .step-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.birth-cert-page .step-number { flex-shrink: 0; width: 60px; height: 60px; background: var(--primary-color); color: var(--text-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 24px; font-weight: 700; }
+.birth-cert-page .step-content h4 { margin-bottom: 8px; text-transform: none; color: var(--primary-color); }
+.birth-cert-page .aftercare-section { background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); color: var(--text-light); padding: 60px 0; margin: 60px 0; }
+.birth-cert-page .aftercare-section h2 { color: var(--text-light); }
+.birth-cert-page .aftercare-section .section-label { color: var(--accent-color); }
+.birth-cert-page .aftercare-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 30px; }
+.birth-cert-page .aftercare-card { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); }
+.birth-cert-page .aftercare-card h3 { color: var(--accent-color); margin-bottom: 16px; text-transform: none; font-size: 20px; }
+.birth-cert-page .aftercare-card p { color: rgba(255,255,255,0.9); margin-bottom: 16px; }
+.birth-cert-page .aftercare-card ol { padding-left: 20px; color: rgba(255,255,255,0.9); }
+.birth-cert-page .aftercare-card li { margin-bottom: 10px; }
+.birth-cert-page .pricing-tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 30px; }
+.birth-cert-page .pricing-tier { background: var(--bg-white); border: 2px solid var(--border-color); border-radius: 12px; padding: 30px; text-align: center; transition: var(--transition); }
+.birth-cert-page .pricing-tier:hover { border-color: var(--accent-color); transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.birth-cert-page .pricing-tier.featured { border-color: var(--accent-color); position: relative; }
+.birth-cert-page .pricing-tier.featured::before { content: 'Most Popular'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent-color); color: var(--text-light); padding: 4px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+.birth-cert-page .pricing-tier h3 { color: var(--primary-color); margin-bottom: 8px; text-transform: none; }
+.birth-cert-page .pricing-tier .timeline { font-size: 28px; font-weight: 700; color: var(--accent-color); margin-bottom: 16px; }
+.birth-cert-page .pricing-tier ul { list-style: none; padding: 0; margin: 20px 0; text-align: left; }
+.birth-cert-page .pricing-tier li { padding: 10px 0; padding-left: 28px; position: relative; border-bottom: 1px solid var(--border-color); }
+.birth-cert-page .pricing-tier li:last-child { border-bottom: none; }
+.birth-cert-page .pricing-tier li::before { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; color: var(--accent-color); }
+.birth-cert-page .faq-section details { margin-bottom: 16px; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; }
+.birth-cert-page .faq-section summary { padding: 18px 24px; background: var(--bg-light); cursor: pointer; font-weight: 600; display: flex; align-items: center; justify-content: space-between; list-style: none; }
+.birth-cert-page .faq-section summary::-webkit-details-marker { display: none; }
+.birth-cert-page .faq-section summary .summary-indicator i { transition: transform 0.3s ease; }
+.birth-cert-page .faq-section details[open] summary .summary-indicator i { transform: rotate(180deg); }
+.birth-cert-page .faq-section .details-content { padding: 24px; }
+
+@media (max-width: 768px) {
+    .birth-cert-page .step-item { flex-direction: column; gap: 16px; }
+    .birth-cert-page .aftercare-grid { grid-template-columns: 1fr; }
+    .birth-cert-page .pricing-tiers { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,280 @@
+/**
+ * Modern Subsection Menu Styles
+ * Sticky sidebar navigation for service pages
+ */
+
+/* Container */
+#subsection-menu {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    z-index: 50;
+}
+
+.subsection-wrapper {
+    background: var(--bg-white, #ffffff);
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+/* Toggle Button - Mobile */
+.subsection-toggle {
+    display: none;
+    width: 100%;
+    padding: 16px 20px;
+    background: var(--primary-color, #0E2B48);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-heading, 'Montserrat', sans-serif);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+}
+
+.subsection-toggle:hover {
+    background: var(--primary-dark, #0a1f33);
+}
+
+.subsection-toggle .toggle-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.subsection-wrapper.collapsed .subsection-toggle .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+/* Navigation */
+.subsection-nav {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.subsection-header {
+    padding: 20px 20px 12px;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.subsection-header h4 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-color, #0E2B48);
+}
+
+/* List */
+.subsection-list {
+    list-style: none;
+    padding: 12px 0;
+    margin: 0;
+}
+
+/* Items */
+.subsection-item {
+    margin: 0;
+}
+
+.subsection-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: var(--text-muted, #666);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.subsection-link i:first-child {
+    width: 20px;
+    text-align: center;
+    color: var(--text-muted, #999);
+    transition: color 0.2s ease;
+}
+
+.subsection-link .expand-icon {
+    margin-left: auto;
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.subsection-link:hover {
+    background: var(--bg-light, #f8f9fa);
+    color: var(--primary-color, #0E2B48);
+    border-left-color: var(--accent-coral, #FF1654);
+}
+
+.subsection-link:hover i:first-child {
+    color: var(--accent-coral, #FF1654);
+}
+
+/* Active State */
+.subsection-item.active > .subsection-link {
+    background: linear-gradient(135deg, rgba(255, 22, 84, 0.08) 0%, rgba(255, 22, 84, 0.04) 100%);
+    color: var(--accent-coral, #FF1654);
+    border-left-color: var(--accent-coral, #FF1654);
+    font-weight: 600;
+}
+
+.subsection-item.active > .subsection-link i:first-child {
+    color: var(--accent-coral, #FF1654);
+}
+
+/* Parent of Active */
+.subsection-item.parent-active > .subsection-link {
+    color: var(--primary-color, #0E2B48);
+    font-weight: 600;
+}
+
+/* Children */
+.subsection-children {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: var(--bg-light, #f8f9fa);
+}
+
+.subsection-children.expanded,
+.subsection-item.parent-active > .subsection-children {
+    max-height: 500px;
+}
+
+.subsection-item.expanded > .subsection-link .expand-icon {
+    transform: rotate(90deg);
+}
+
+.subsection-children .subsection-link {
+    padding-left: 52px;
+    font-size: 13px;
+}
+
+.subsection-children .subsection-children .subsection-link {
+    padding-left: 72px;
+    font-size: 12px;
+}
+
+/* Hover effects for children */
+.subsection-children .subsection-link:hover {
+    background: rgba(14, 43, 72, 0.05);
+}
+
+/* Badge for counts (optional) */
+.subsection-badge {
+    margin-left: auto;
+    background: var(--accent-coral, #FF1654);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1023px) {
+    #subsection-menu {
+        position: relative;
+        top: 0;
+        margin-bottom: 24px;
+    }
+
+    .subsection-toggle {
+        display: flex;
+    }
+
+    .subsection-wrapper.collapsed .subsection-nav {
+        max-height: 0;
+    }
+
+    .subsection-wrapper:not(.collapsed) .subsection-nav {
+        max-height: 1000px;
+    }
+}
+
+/* Desktop Hover Animations */
+@media (min-width: 1024px) {
+    .subsection-wrapper {
+        min-width: 260px;
+    }
+
+    .subsection-item.has-children > .subsection-link {
+        cursor: pointer;
+    }
+
+    .subsection-item.has-children:hover > .subsection-children {
+        max-height: 500px;
+    }
+
+    .subsection-item.has-children:hover > .subsection-link .expand-icon {
+        transform: rotate(90deg);
+    }
+}
+
+/* Dark Mode */
+body.theme-dark .subsection-wrapper {
+    background: #21262d;
+    border-color: #30363d;
+}
+
+body.theme-dark .subsection-header {
+    border-bottom-color: #30363d;
+}
+
+body.theme-dark .subsection-header h4 {
+    color: #f0f6fc;
+}
+
+body.theme-dark .subsection-link {
+    color: #a8b3c2;
+}
+
+body.theme-dark .subsection-link:hover {
+    background: #30363d;
+    color: #f0f6fc;
+}
+
+body.theme-dark .subsection-item.active > .subsection-link {
+    background: linear-gradient(135deg, rgba(255, 71, 87, 0.15) 0%, rgba(255, 71, 87, 0.08) 100%);
+    color: #ff4757;
+}
+
+body.theme-dark .subsection-children {
+    background: #161b22;
+}
+
+body.theme-dark .subsection-children .subsection-link:hover {
+    background: #21262d;
+}
+
+/* Animation for scroll spy */
+.subsection-item.active > .subsection-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: var(--accent-coral, #FF1654);
+    animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+    to {
+        height: 100%;
+    }
+}

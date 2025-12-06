@@ -97,102 +97,84 @@
 
 /* ========================================
    HOMEPAGE ONLY - Transparent Header
+   Uses .header-homepage class on the header element directly (more reliable than body.homepage)
    Coral top bar stays coral, main nav transparent with WHITE text
    ======================================== */
 
 /* Homepage: Keep announcement bar CORAL (not transparent) */
-body.homepage .header-announcement {
+.header-desktop.exodus-header.header-homepage .header-announcement {
     background: var(--accent-color) !important;
 }
 
-/* Homepage: Announcement bar text stays white on coral */
-body.homepage .header-desktop.exodus-header:not(.scrolled) .announcement-label {
-    color: #ffffff;
-}
-
-body.homepage .header-desktop.exodus-header:not(.scrolled) .announcement-btn {
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-body.homepage .header-desktop.exodus-header:not(.scrolled) .announcement-btn:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-}
-
-body.homepage .header-desktop.exodus-header:not(.scrolled) .announcement-cta {
-    color: #ffffff;
-}
-
-/* Homepage: Main header TRANSPARENT (not just .header-main) with WHITE text before scroll */
-body.homepage .header-desktop.exodus-header:not(.scrolled) {
+/* Homepage: Main header TRANSPARENT before scroll */
+.header-desktop.exodus-header.header-homepage:not(.scrolled) {
     background: transparent !important;
-    border-bottom: none;
-    box-shadow: none;
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
 
-body.homepage .header-desktop.exodus-header:not(.scrolled) .header-main {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .header-main {
     background: transparent !important;
 }
 
 /* Homepage: WHITE logo text on transparent nav */
-body.homepage .header-desktop.exodus-header:not(.scrolled) .logo-text,
-body.homepage .header-desktop.exodus-header:not(.scrolled) .logo-text .logo-suffix {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .logo-text,
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .logo-text .logo-suffix {
     color: #ffffff !important;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-body.homepage .header-desktop.exodus-header:not(.scrolled) .logo-domain {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .logo-domain {
     color: var(--accent-color) !important;
 }
 
-body.homepage .header-desktop.exodus-header:not(.scrolled) .logo-tagline {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .logo-tagline {
     color: rgba(255, 255, 255, 0.85) !important;
 }
 
 /* Homepage: WHITE nav links before scroll */
-body.homepage .header-desktop.exodus-header:not(.scrolled) .nav-link {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .nav-link {
     color: #ffffff !important;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-body.homepage .header-desktop.exodus-header:not(.scrolled) .nav-link i {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .nav-link i {
     color: #ffffff !important;
 }
 
-body.homepage .header-desktop.exodus-header:not(.scrolled) .nav-link:hover {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .nav-link:hover {
     color: var(--accent-color) !important;
 }
 
 /* Homepage: WHITE contact button before scroll */
-body.homepage .header-desktop.exodus-header:not(.scrolled) .header-contact-btn {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .header-contact-btn {
     color: #ffffff !important;
     border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-body.homepage .header-desktop.exodus-header:not(.scrolled) .header-contact-btn:hover {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .header-contact-btn:hover {
     background: var(--accent-color) !important;
     border-color: var(--accent-color) !important;
 }
 
 /* Homepage: WHITE social icons before scroll */
-body.homepage .header-desktop.exodus-header:not(.scrolled) .social-icons a {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .social-icons a {
     color: #ffffff !important;
     border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
-body.homepage .header-desktop.exodus-header:not(.scrolled) .social-icons a:hover {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .social-icons a:hover {
     background: var(--accent-color) !important;
     border-color: var(--accent-color) !important;
 }
 
 /* Homepage: WHITE theme toggle before scroll */
-body.homepage .header-desktop.exodus-header:not(.scrolled) #themeToggle {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) #themeToggle {
     color: #ffffff !important;
 }
 
 /* Homepage: PNG logo should have brightness filter for visibility on dark hero */
-body.homepage .header-desktop.exodus-header:not(.scrolled) .logo-img {
+.header-desktop.exodus-header.header-homepage:not(.scrolled) .logo-img {
     filter: brightness(0) invert(1) !important;
 }
 

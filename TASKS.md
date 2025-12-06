@@ -80,7 +80,7 @@ This document tracks all tasks for the project, organized by status.
 - **Data pattern:** Service pages use `pageData` object passed to ServiceLayout
 
 ### Service Worker
-- **Current version:** v154
+- **Current version:** v156
 - **Bump version** after any CSS/JS changes to bust cache
 
 ### Mobile Sidebar Contrast (visibility-fixes.css)

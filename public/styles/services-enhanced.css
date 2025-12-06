@@ -744,6 +744,16 @@
     transition: all 0.3s ease;
 }
 
+/* Ensure anchor card links don't inherit browser blue */
+a.service-card-v2,
+a.service-card-v2:link,
+a.service-card-v2:visited,
+a.service-card-v2:hover,
+a.service-card-v2:active {
+    color: var(--text-dark, #1a1a1a);
+    text-decoration: none;
+}
+
 .service-card-v2:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);

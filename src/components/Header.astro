@@ -119,13 +119,13 @@ const { isHomepage = false } = Astro.props;
 
 <!-- Mobile Header - Shown on mobile devices -->
 <div class="header-mobile">
-  <a href="#" class="header-icon" id="sidebarToggle" aria-label="Open menu">
+  <button type="button" class="header-icon" id="sidebarToggle" aria-label="Open menu">
     <i class="fas fa-bars"></i>
-  </a>
+  </button>
   <a href="/" class="header-title">OnlineTranslation<span>.ae</span></a>
-  <a href="#" id="mobileThemeToggle" class="header-icon" aria-label="Toggle theme">
+  <button type="button" id="mobileThemeToggle" class="header-icon" aria-label="Toggle theme">
     <i class="fas fa-moon"></i>
-  </a>
+  </button>
 </div>
 
 <script>

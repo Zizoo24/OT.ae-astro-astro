@@ -112,10 +112,19 @@
 
 /* WhatsApp buttons - white text on green is OK */
 .btn-whatsapp,
-.mobile-action-btn--whatsapp,
-.footer-whatsapp {
+.mobile-action-btn--whatsapp {
     background: #25D366;
     color: #ffffff !important;
+}
+
+/* Footer WhatsApp - green icon on normal background (matches other footer items) */
+.footer-whatsapp {
+    background: transparent !important;
+}
+
+.footer-whatsapp i,
+.footer-whatsapp span {
+    color: #25D366 !important;
 }
 
 .btn-whatsapp:hover {

@@ -43,7 +43,10 @@
     <ul>
       <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
       
-      <li class="sidebar-section-title" data-accordion="services">Services <i class="fas fa-chevron-down accordion-icon"></i></li>
+      <li class="sidebar-section-title" data-accordion="services">
+        <a href="/services/" class="section-link">Services</a>
+        <button class="accordion-toggle" aria-label="Expand services menu"><i class="fas fa-chevron-down accordion-icon"></i></button>
+      </li>
       <ul class="sidebar-accordion-content" id="accordion-services">
         <li><a href="/services/legal-translation/"><i class="fas fa-gavel"></i> Legal Translation</a></li>
         <li><a href="/services/golden-visa-translation/"><i class="fas fa-passport"></i> Golden Visa</a></li>
@@ -52,7 +55,10 @@
         <li><a href="/services/corporate-translation/"><i class="fas fa-building"></i> Corporate Translation</a></li>
       </ul>
       
-      <li class="sidebar-section-title" data-accordion="personal">Personal Documents <i class="fas fa-chevron-down accordion-icon"></i></li>
+      <li class="sidebar-section-title" data-accordion="personal">
+        <a href="/personal/" class="section-link">Personal Documents</a>
+        <button class="accordion-toggle" aria-label="Expand personal documents menu"><i class="fas fa-chevron-down accordion-icon"></i></button>
+      </li>
       <ul class="sidebar-accordion-content" id="accordion-personal">
         <li><a href="/personal/vital-records/birth/"><i class="fas fa-baby"></i> Birth Certificate</a></li>
         <li><a href="/personal/vital-records/marriage/"><i class="fas fa-ring"></i> Marriage Certificate</a></li>
@@ -65,14 +71,20 @@
         <li><a href="/personal/immigration/license/"><i class="fas fa-id-card"></i> Driving License</a></li>
       </ul>
       
-      <li class="sidebar-section-title" data-accordion="corporate">Corporate Documents <i class="fas fa-chevron-down accordion-icon"></i></li>
+      <li class="sidebar-section-title" data-accordion="corporate">
+        <a href="/legal/" class="section-link">Corporate Documents</a>
+        <button class="accordion-toggle" aria-label="Expand corporate documents menu"><i class="fas fa-chevron-down accordion-icon"></i></button>
+      </li>
       <ul class="sidebar-accordion-content" id="accordion-corporate">
         <li><a href="/legal/corporate/poa/"><i class="fas fa-file-signature"></i> Power of Attorney</a></li>
         <li><a href="/legal/corporate/moa/"><i class="fas fa-building"></i> Memorandum of Association</a></li>
         <li><a href="/legal/contracts/nda/"><i class="fas fa-file-contract"></i> NDA Translation</a></li>
       </ul>
       
-      <li class="sidebar-section-title" data-accordion="locations">Locations <i class="fas fa-chevron-down accordion-icon"></i></li>
+      <li class="sidebar-section-title" data-accordion="locations">
+        <a href="/locations/" class="section-link">Locations</a>
+        <button class="accordion-toggle" aria-label="Expand locations menu"><i class="fas fa-chevron-down accordion-icon"></i></button>
+      </li>
       <ul class="sidebar-accordion-content" id="accordion-locations">
         <li><a href="/locations/dubai/"><i class="fas fa-city"></i> Dubai</a></li>
         <li><a href="/locations/dubai/palm-jumeirah/"><i class="fas fa-umbrella-beach"></i> Palm Jumeirah</a></li>
@@ -82,7 +94,10 @@
         <li><a href="/locations/sharjah/"><i class="fas fa-map-marker-alt"></i> Sharjah</a></li>
       </ul>
       
-      <li class="sidebar-section-title" data-accordion="resources">Resources <i class="fas fa-chevron-down accordion-icon"></i></li>
+      <li class="sidebar-section-title" data-accordion="resources">
+        <a href="/resources/" class="section-link">Resources</a>
+        <button class="accordion-toggle" aria-label="Expand resources menu"><i class="fas fa-chevron-down accordion-icon"></i></button>
+      </li>
       <ul class="sidebar-accordion-content" id="accordion-resources">
         <li><a href="/resources/faq/"><i class="fas fa-question-circle"></i> FAQ</a></li>
         <li><a href="/resources/pricing-guide/"><i class="fas fa-tags"></i> Pricing Guide</a></li>
@@ -188,11 +203,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Sidebar accordion
+  // Sidebar accordion - toggle buttons only
+  const accordionToggles = document.querySelectorAll('.sidebar-section-title .accordion-toggle');
   const accordionTitles = document.querySelectorAll('.sidebar-section-title');
-  accordionTitles.forEach(function(title) {
-    title.addEventListener('click', function() {
-      const accordionId = this.getAttribute('data-accordion');
+  
+  accordionToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const title = this.closest('.sidebar-section-title');
+      const accordionId = title?.getAttribute('data-accordion');
       const content = document.getElementById('accordion-' + accordionId);
       const isOpen = content?.classList.contains('is-open');
       
@@ -205,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       if (!isOpen) {
         content?.classList.add('is-open');
-        this.classList.add('is-active');
+        title?.classList.add('is-active');
       }
     });
   });

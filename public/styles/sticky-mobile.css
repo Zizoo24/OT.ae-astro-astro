@@ -286,7 +286,32 @@
 .sidebar-section-title:hover,
 .sidebar-section-title:active {
     background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-section-title .section-link {
+    flex: 1;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.sidebar-section-title .section-link:hover,
+.sidebar-section-title .section-link:active {
     color: #ffffff;
+}
+
+.sidebar-section-title .accordion-toggle {
+    background: transparent;
+    border: none;
+    padding: 8px 12px;
+    margin: -8px -12px -8px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sidebar-section-title .accordion-icon {

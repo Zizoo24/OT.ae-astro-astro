@@ -120,7 +120,7 @@ Optional props:
 - `accordionSections`: Array of {title, id, items: [{heading, body}]}
 - `faqs`: Array of {question, answer} for FAQ section
 
-**Created Astro Pages (23 total):**
+**Created Astro Pages (29 total):**
 
 *Hub/Index Pages (using BaseLayout):*
 - Homepage: /
@@ -128,6 +128,7 @@ Optional props:
 - Legal documents hub: /legal/
 - Locations hub: /locations/
 - Dubai hub: /locations/dubai/
+- Services hub: /services/
 
 *Personal Documents (using ServiceLayout):*
 - Birth certificate: /personal/vital-records/birth/
@@ -152,3 +153,10 @@ Optional props:
 - Business Bay: /locations/dubai/business-bay/
 - Abu Dhabi: /locations/abu-dhabi/
 - Sharjah: /locations/sharjah/
+
+*Services Pages (using ServiceLayout):*
+- Attestation & MOFAIC: /services/attestation/
+- Golden Visa Translation: /services/golden-visa-translation/
+- Certificate Translation: /services/certificate-translation/
+- Corporate Translation: /services/corporate-translation/
+- Legal Translation: /services/legal-translation/

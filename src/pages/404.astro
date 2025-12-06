@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Page Not Found | OnlineTranslation.ae"
+  description="The page you're looking for could not be found. Return to our homepage or contact us for assistance."
+>
+  <section class="section bg-white" style="min-height: 60vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="error-content">
+        <div class="error-code">404</div>
+        <h1>Page Not Found</h1>
+        <p class="error-message">The page you are looking for may have been moved, deleted, or does not exist. You can return to our homepage or use the links below to find what you need.</p>
+        
+        <div class="quick-links">
+          <h3>Popular Pages</h3>
+          <div class="links-grid">
+            <a href="/services/legal-translation/">Legal Translation</a>
+            <a href="/personal/vital-records/birth/">Birth Certificate</a>
+            <a href="/services/golden-visa-translation/">Golden Visa</a>
+            <a href="/services/attestation/">Attestation</a>
+            <a href="/contact/">Contact Us</a>
+            <a href="/resources/faq/">FAQ</a>
+          </div>
+        </div>
+        
+        <div class="cta-buttons">
+          <a href="/" class="btn btn-primary">
+            <i class="fas fa-home"></i> Return to Homepage
+          </a>
+          <a href="https://wa.me/971508620217" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Ask Us on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .error-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .error-code {
+    font-size: 8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 1rem;
+    opacity: 0.2;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .error-message {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  
+  .quick-links {
+    background: #f8f9fa;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .quick-links h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .links-grid a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .links-grid a:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background: var(--accent-color);
+    color: #ffffff;
+  }
+  
+  .btn-primary:hover {
+    background: #e0144c;
+    transform: translateY(-2px);
+  }
+  
+  .btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+  
+  .btn-outline:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+  }
+</style>

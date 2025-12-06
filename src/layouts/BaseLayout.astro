@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import MobileShell from '../components/MobileShell.astro';
 
 interface Props {
   title: string;
@@ -93,6 +94,18 @@ const fullCanonical = canonical.startsWith('http') ? canonical : `${siteUrl}${ca
   </main>
 
   <Footer />
+
+  <MobileShell />
+
+  <!-- Scripts -->
+  <script is:inline src="/scripts/os-detect.js"></script>
+  <script is:inline defer src="/scripts/cookie-consent.js"></script>
+  <script is:inline defer src="/scripts/analytics.js"></script>
+  <script is:inline src="/scripts/main.js"></script>
+  <script is:inline src="/scripts/navigation.js" defer></script>
+  <script is:inline src="/scripts/subsection-menu.js" defer></script>
+  <script is:inline src="/scripts/search-index.js" defer></script>
+  <script is:inline src="/scripts/form-handler.js" defer></script>
 
 </body>
 </html>

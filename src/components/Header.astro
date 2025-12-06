@@ -6,210 +6,207 @@ interface Props {
 const { isHomepage = false } = Astro.props;
 ---
 
-<!-- Modern Desktop Header -->
-<header class="ot-desktop-header">
-  <div class="ot-nav-shell">
-    <a href="/" class="ot-brand">
-      <span class="ot-brand-mark">OT</span>
-      <span class="ot-brand-text">OnlineTranslation<span>.ae</span></span>
-    </a>
-
-    <nav class="ot-main-nav" aria-label="Primary">
-      <ul class="ot-nav-list">
-        <li class="ot-nav-item ot-has-dropdown">
-          <button class="ot-nav-link" type="button" aria-expanded="false" aria-haspopup="true">
-            Services
-            <span class="ot-nav-caret">▾</span>
-          </button>
-          <div class="ot-dropdown-panel">
-            <div class="ot-dropdown-col">
-              <p class="ot-dropdown-label">Core</p>
-              <a href="/services/legal-translation/" class="ot-dropdown-link">Legal Translation (MOJ)</a>
-              <a href="/services/certificate-translation/" class="ot-dropdown-link">Certificate Translation</a>
-              <a href="/services/corporate-translation/" class="ot-dropdown-link">Corporate & Contracts</a>
+<!-- Desktop Header - Exodus Style -->
+<header id="header" class:list={["header-desktop", "exodus-header", { "header-homepage": isHomepage }]}>
+  <!-- Top Announcement Bar -->
+  <div class="header-announcement">
+    <div class="container announcement-flex">
+      <span class="announcement-label">MOJ-Licensed Legal Translation</span>
+      <div class="announcement-actions">
+        <a href="https://wa.me/971508620217" class="announcement-btn announcement-btn--whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="tel:+971508620217" class="announcement-btn announcement-btn--call"><i class="fas fa-phone-alt"></i> Call</a>
+        <a href="https://wa.me/971508620217" class="announcement-cta">Send Documents <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- Main Header - Transparent Overlay -->
+  <div class="header-main">
+    <div class="container">
+      <div class="header-main-row">
+        <div class="header-logo">
+          <a href="/">
+            <img src="/images/logo/brand/emblem-64.png" alt="OnlineTranslation.ae" class="logo-img" loading="eager">
+            <div class="logo-text-block">
+              <span class="logo-text">Online<span class="logo-suffix">Translation</span><span class="logo-domain">.ae</span></span>
+              <span class="logo-tagline">Boutique Legal Translation</span>
             </div>
-            <div class="ot-dropdown-col">
-              <p class="ot-dropdown-label">Immigration</p>
-              <a href="/services/golden-visa/" class="ot-dropdown-link">Golden Visa Packages</a>
-              <a href="/services/attestation/" class="ot-dropdown-link">Attestation & MOFAIC</a>
-            </div>
+          </a>
+        </div>
+        <nav class="header-nav" id="desktopNav">
+          <ul class="nav-menu">
+            <li class="nav-item has-dropdown">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item has-dropdown mega-dropdown">
+              <a href="/services/" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Translation Services</li>
+                <li><a href="/services/legal-translation/">Legal Translation</a></li>
+                <li><a href="/services/certificate-translation/">Certificate Translation</a></li>
+                <li><a href="/services/corporate-translation/">Corporate Translation</a></li>
+                <li><a href="/services/golden-visa-translation/">Golden Visa</a></li>
+                <li><a href="/services/attestation/">Attestation & MOFAIC</a></li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-header">Vital Records</li>
+                <li><a href="/personal/vital-records/birth/">Birth Certificate</a></li>
+                <li><a href="/personal/vital-records/marriage/">Marriage Certificate</a></li>
+                <li><a href="/personal/vital-records/death/">Death Certificate</a></li>
+                <li><a href="/personal/vital-records/divorce/">Divorce Certificate</a></li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-header">Academic & Immigration</li>
+                <li><a href="/personal/academic/degree/">University Degree</a></li>
+                <li><a href="/personal/academic/transcripts/">Academic Transcripts</a></li>
+                <li><a href="/personal/immigration/pcc/">Police Clearance (PCC)</a></li>
+                <li><a href="/personal/immigration/license/">Driving License</a></li>
+                <li><a href="/personal/immigration/bank/">Bank Statements</a></li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-header">Legal & Commercial</li>
+                <li><a href="/legal/corporate/poa/">Power of Attorney</a></li>
+                <li><a href="/legal/corporate/moa/">Memorandum of Association</a></li>
+                <li><a href="/legal/contracts/nda/">NDA Translation</a></li>
+                <li><a href="/specialized/medical/">Medical Reports</a></li>
+              </ul>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="/locations/" class="nav-link">Locations <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="/locations/dubai/">Dubai (All Areas)</a></li>
+                <li><a href="/locations/dubai/palm-jumeirah/">Palm Jumeirah</a></li>
+                <li><a href="/locations/dubai/jlt/">JLT & DMCC</a></li>
+                <li><a href="/locations/dubai/difc/">DIFC</a></li>
+                <li><a href="/locations/dubai/business-bay/">Business Bay</a></li>
+                <li><a href="/locations/abu-dhabi/">Abu Dhabi</a></li>
+                <li><a href="/locations/sharjah/">Sharjah</a></li>
+              </ul>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="/industries/" class="nav-link">Industries <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="/industries/legal/">Legal & Law Firms</a></li>
+                <li><a href="/industries/healthcare/">Healthcare</a></li>
+                <li><a href="/industries/real-estate/">Real Estate</a></li>
+                <li><a href="/industries/e-commerce/">E-Commerce</a></li>
+              </ul>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="/resources/" class="nav-link">Resources <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="/resources/faq/">FAQ</a></li>
+                <li><a href="/resources/pricing-guide/">Pricing Guide</a></li>
+                <li><a href="/resources/document-checklist/">Document Checklist</a></li>
+                <li><a href="/resources/attestation-guide/">Attestation Guide</a></li>
+                <li><a href="/resources/golden-visa-checklist/">Golden Visa Checklist</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <a href="/contact/" class="header-contact-btn">Contact</a>
+        <div class="header-actions">
+          <a href="#" id="themeToggle" class="header-icon" aria-label="Toggle theme" title="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </a>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/onlinetranslation.ae" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/online-translation-agency-dubai/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </div>
-        </li>
-
-        <li class="ot-nav-item ot-has-dropdown">
-          <button class="ot-nav-link" type="button" aria-expanded="false" aria-haspopup="true">
-            Personal Documents
-            <span class="ot-nav-caret">▾</span>
-          </button>
-          <div class="ot-dropdown-panel">
-            <div class="ot-dropdown-col">
-              <p class="ot-dropdown-label">Vital Records</p>
-              <a href="/personal/vital-records/birth/" class="ot-dropdown-link">Birth Certificate</a>
-              <a href="/personal/vital-records/marriage/" class="ot-dropdown-link">Marriage Certificate</a>
-              <a href="/personal/vital-records/divorce/" class="ot-dropdown-link">Divorce Certificate</a>
-              <a href="/personal/vital-records/death/" class="ot-dropdown-link">Death Certificate</a>
-            </div>
-            <div class="ot-dropdown-col">
-              <p class="ot-dropdown-label">Immigration</p>
-              <a href="/personal/immigration/pcc/" class="ot-dropdown-link">Police Clearance / PCC</a>
-              <a href="/personal/education/degree/" class="ot-dropdown-link">Degree Certificate</a>
-            </div>
-          </div>
-        </li>
-
-        <li class="ot-nav-item ot-has-dropdown">
-          <button class="ot-nav-link" type="button" aria-expanded="false" aria-haspopup="true">
-            Legal & Corporate
-            <span class="ot-nav-caret">▾</span>
-          </button>
-          <div class="ot-dropdown-panel">
-            <div class="ot-dropdown-col">
-              <p class="ot-dropdown-label">Corporate</p>
-              <a href="/legal/corporate/moa/" class="ot-dropdown-link">Memorandum of Association</a>
-              <a href="/legal/corporate/poa/" class="ot-dropdown-link">Power of Attorney</a>
-              <a href="/legal/corporate/trade-license/" class="ot-dropdown-link">Trade License</a>
-            </div>
-            <div class="ot-dropdown-col">
-              <p class="ot-dropdown-label">Contracts</p>
-              <a href="/legal/contracts/nda/" class="ot-dropdown-link">NDA / Confidentiality</a>
-              <a href="/legal/contracts/employment/" class="ot-dropdown-link">Employment Contract</a>
-            </div>
-          </div>
-        </li>
-
-        <li class="ot-nav-item ot-has-dropdown">
-          <button class="ot-nav-link" type="button" aria-expanded="false" aria-haspopup="true">
-            Locations
-            <span class="ot-nav-caret">▾</span>
-          </button>
-          <div class="ot-dropdown-panel">
-            <div class="ot-dropdown-col">
-              <p class="ot-dropdown-label">Dubai</p>
-              <a href="/locations/dubai/" class="ot-dropdown-link">Dubai (All Areas)</a>
-              <a href="/locations/palm-jumeirah/" class="ot-dropdown-link">Palm Jumeirah</a>
-              <a href="/locations/jlt-dmcc/" class="ot-dropdown-link">JLT & DMCC</a>
-              <a href="/locations/difc/" class="ot-dropdown-link">DIFC</a>
-            </div>
-            <div class="ot-dropdown-col">
-              <p class="ot-dropdown-label">Other Emirates</p>
-              <a href="/locations/abu-dhabi/" class="ot-dropdown-link">Abu Dhabi</a>
-              <a href="/locations/sharjah/" class="ot-dropdown-link">Sharjah</a>
-            </div>
-          </div>
-        </li>
-
-        <li class="ot-nav-item ot-has-dropdown">
-          <button class="ot-nav-link" type="button" aria-expanded="false" aria-haspopup="true">
-            Resources
-            <span class="ot-nav-caret">▾</span>
-          </button>
-          <div class="ot-dropdown-panel ot-dropdown-panel--single">
-            <div class="ot-dropdown-col">
-              <p class="ot-dropdown-label">Help</p>
-              <a href="/resources/faq/" class="ot-dropdown-link">FAQ</a>
-              <a href="/resources/pricing/" class="ot-dropdown-link">Pricing Guide</a>
-            </div>
-          </div>
-        </li>
-
-        <li class="ot-nav-item">
-          <a href="/contact/" class="ot-nav-link">Contact</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="ot-nav-cta">
-      <a href="https://wa.me/971508620217" class="ot-whatsapp-pill">
-        <span class="ot-wa-dot"></span>
-        WhatsApp us
-      </a>
+          <a href="#" class="menu-toggle-btn mobile-only" id="mobileMenuToggle" role="button" aria-label="Open menu" title="Menu"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </header>
 
-<!-- Mobile Header -->
-<header class="ot-mobile-header">
-  <div class="ot-mobile-shell">
-    <a href="/" class="ot-brand">
-      <span class="ot-brand-mark">OT</span>
-      <span class="ot-brand-text">OnlineTranslation<span>.ae</span></span>
-    </a>
-    <button class="ot-mobile-toggle" aria-label="Open menu" id="mobileMenuToggle" aria-expanded="false">
-      <span class="ot-hamburger"></span>
-    </button>
-  </div>
-</header>
-
-<!-- Mobile Menu Overlay -->
-<div class="ot-mobile-menu" id="mobileMenu" aria-hidden="true">
-  <div class="ot-mobile-menu-header">
-    <span class="ot-brand-text">OnlineTranslation<span>.ae</span></span>
-    <button class="ot-mobile-close" aria-label="Close menu" id="mobileMenuClose">×</button>
-  </div>
-  <nav class="ot-mobile-nav">
-    <a href="/" class="ot-mobile-link">Home</a>
-    <a href="/services/legal-translation/" class="ot-mobile-link">Legal Translation</a>
-    <a href="/personal/vital-records/birth/" class="ot-mobile-link">Birth Certificate</a>
-    <a href="/personal/vital-records/marriage/" class="ot-mobile-link">Marriage Certificate</a>
-    <a href="/legal/corporate/moa/" class="ot-mobile-link">MOA Translation</a>
-    <a href="/legal/corporate/poa/" class="ot-mobile-link">Power of Attorney</a>
-    <a href="/locations/dubai/" class="ot-mobile-link">Dubai</a>
-    <a href="/contact/" class="ot-mobile-link">Contact</a>
-  </nav>
-  <div class="ot-mobile-cta">
-    <a href="https://wa.me/971508620217" class="ot-whatsapp-pill ot-whatsapp-pill--large">
-      <span class="ot-wa-dot"></span>
-      WhatsApp us
-    </a>
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay">
+  <div class="mobile-nav-container">
+    <div class="mobile-nav-header">
+      <a href="/" class="mobile-logo">
+        <span class="logo-text">Online<span class="logo-suffix">Translation</span><span class="logo-domain">.ae</span></span>
+      </a>
+      <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav-menu">
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/services/" class="mobile-nav-link">Services</a>
+      <a href="/services/legal-translation/" class="mobile-nav-link mobile-nav-link--sub">Legal Translation</a>
+      <a href="/services/certificate-translation/" class="mobile-nav-link mobile-nav-link--sub">Certificate Translation</a>
+      <a href="/services/golden-visa-translation/" class="mobile-nav-link mobile-nav-link--sub">Golden Visa</a>
+      <a href="/personal/vital-records/birth/" class="mobile-nav-link">Birth Certificate</a>
+      <a href="/personal/vital-records/marriage/" class="mobile-nav-link">Marriage Certificate</a>
+      <a href="/legal/corporate/moa/" class="mobile-nav-link">MOA Translation</a>
+      <a href="/legal/corporate/poa/" class="mobile-nav-link">Power of Attorney</a>
+      <a href="/locations/" class="mobile-nav-link">Locations</a>
+      <a href="/industries/" class="mobile-nav-link">Industries</a>
+      <a href="/resources/" class="mobile-nav-link">Resources</a>
+      <a href="/contact/" class="mobile-nav-link">Contact</a>
+    </nav>
+    <div class="mobile-nav-cta">
+      <a href="https://wa.me/971508620217" class="btn btn--whatsapp btn--lg btn--full">
+        <i class="fab fa-whatsapp"></i> Send Documents on WhatsApp
+      </a>
+      <a href="tel:+971508620217" class="btn btn--outline btn--full">
+        <i class="fas fa-phone-alt"></i> Call +971 50 862 0217
+      </a>
+    </div>
   </div>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('mobileMenuToggle');
-    const close = document.getElementById('mobileMenuClose');
-    const menu = document.getElementById('mobileMenu');
-    
-    function openMenu() {
-      menu?.classList.add('is-open');
-      menu?.setAttribute('aria-hidden', 'false');
-      toggle?.setAttribute('aria-expanded', 'true');
+    const mobileToggle = document.getElementById('mobileMenuToggle');
+    const mobileClose = document.getElementById('mobileCloseBtn');
+    const mobileOverlay = document.getElementById('mobileNavOverlay');
+    const header = document.getElementById('header');
+
+    function openMobileNav() {
+      mobileOverlay?.classList.add('is-open');
       document.body.style.overflow = 'hidden';
     }
-    
-    function closeMenu() {
-      menu?.classList.remove('is-open');
-      menu?.setAttribute('aria-hidden', 'true');
-      toggle?.setAttribute('aria-expanded', 'false');
+
+    function closeMobileNav() {
+      mobileOverlay?.classList.remove('is-open');
       document.body.style.overflow = '';
     }
-    
-    toggle?.addEventListener('click', openMenu);
-    close?.addEventListener('click', closeMenu);
-    
-    menu?.addEventListener('click', (e) => {
-      if (e.target === menu) closeMenu();
+
+    mobileToggle?.addEventListener('click', (e) => {
+      e.preventDefault();
+      openMobileNav();
     });
-    
+
+    mobileClose?.addEventListener('click', closeMobileNav);
+
+    mobileOverlay?.addEventListener('click', (e) => {
+      if (e.target === mobileOverlay) closeMobileNav();
+    });
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && menu?.classList.contains('is-open')) {
-        closeMenu();
-      }
+      if (e.key === 'Escape') closeMobileNav();
     });
 
-    const dropdownButtons = document.querySelectorAll('.ot-has-dropdown > .ot-nav-link');
-    dropdownButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        dropdownButtons.forEach(b => b.setAttribute('aria-expanded', 'false'));
-        this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    // Scroll behavior for header
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 50) {
+        header?.classList.add('scrolled');
+      } else {
+        header?.classList.remove('scrolled');
+      }
+      lastScroll = currentScroll;
+    });
+
+    // Desktop dropdown hover behavior
+    const dropdownItems = document.querySelectorAll('.nav-item.has-dropdown');
+    dropdownItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.classList.add('is-open');
       });
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.ot-has-dropdown')) {
-        dropdownButtons.forEach(b => b.setAttribute('aria-expanded', 'false'));
-      }
+      item.addEventListener('mouseleave', () => {
+        item.classList.remove('is-open');
+      });
     });
   });
 </script>

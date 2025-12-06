@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Privacy Policy | OnlineTranslation.ae"
+  description="Privacy policy for OnlineTranslation.ae. How we collect, use, and protect your personal information and documents."
+>
+  <section class="hero-section bg-dark" data-theme="dark">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">HOME</a>
+        <span class="separator">&gt;</span>
+        <span class="current">PRIVACY POLICY</span>
+      </nav>
+      
+      <h1>Privacy Policy</h1>
+      <p class="hero-subtitle">Your Data Protection</p>
+      <p class="hero-intro">We take the privacy and security of your documents seriously. This policy explains how we collect, use, and protect your information.</p>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="container content-container">
+      <div class="policy-content">
+        <p class="last-updated">Last updated: December 2024</p>
+        
+        <h2>Information We Collect</h2>
+        <p>When you use our services, we may collect:</p>
+        <ul>
+          <li><strong>Contact Information:</strong> Name, email address, phone number, and WhatsApp number</li>
+          <li><strong>Documents:</strong> Files you submit for translation</li>
+          <li><strong>Communication Records:</strong> Messages exchanged regarding your translation projects</li>
+          <li><strong>Payment Information:</strong> Transaction details (processed securely by third-party payment providers)</li>
+        </ul>
+        
+        <h2>How We Use Your Information</h2>
+        <p>Your information is used to:</p>
+        <ul>
+          <li>Provide translation services as requested</li>
+          <li>Communicate with you about your projects</li>
+          <li>Process payments for services</li>
+          <li>Improve our services and customer experience</li>
+          <li>Comply with legal requirements</li>
+        </ul>
+        
+        <h2>Document Security</h2>
+        <p>We understand that your documents often contain sensitive personal and business information. We implement the following security measures:</p>
+        <ul>
+          <li>Secure file transfer protocols for document submission</li>
+          <li>Limited access to documents on a need-to-know basis</li>
+          <li>Regular deletion of completed project files (within 30 days unless extended retention is requested)</li>
+          <li>Non-disclosure agreements with all translators and staff</li>
+        </ul>
+        
+        <h2>Third-Party Services</h2>
+        <p>We may use third-party services for:</p>
+        <ul>
+          <li>Payment processing</li>
+          <li>Cloud storage and backup</li>
+          <li>Communication (WhatsApp, email providers)</li>
+          <li>Website analytics</li>
+        </ul>
+        <p>These providers have their own privacy policies, and we select partners who maintain appropriate security standards.</p>
+        
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Request access to your personal data</li>
+          <li>Request correction of inaccurate data</li>
+          <li>Request deletion of your data (subject to legal retention requirements)</li>
+          <li>Withdraw consent for marketing communications</li>
+        </ul>
+        
+        <h2>Data Retention</h2>
+        <p>We retain documents and project files for 30 days after completion unless you request extended storage or earlier deletion. Contact information and transaction records may be retained longer for legal and accounting purposes.</p>
+        
+        <h2>Cookies</h2>
+        <p>Our website uses essential cookies for functionality and analytics cookies to understand how visitors use our site. You can control cookie preferences through your browser settings.</p>
+        
+        <h2>Contact Us</h2>
+        <p>For privacy-related inquiries or to exercise your rights, contact us at:</p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:info@onlinetranslation.ae">info@onlinetranslation.ae</a><br>
+          <strong>WhatsApp:</strong> <a href="https://wa.me/971508620217">+971 50 862 0217</a>
+        </p>
+        
+        <h2>Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. Significant changes will be communicated via our website or direct notification.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    padding: 8rem 0 4rem;
+    background: var(--primary-color);
+  }
+  
+  .breadcrumb {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+  }
+  
+  .breadcrumb a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    color: #ffffff;
+  }
+  
+  .breadcrumb .separator {
+    margin: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .breadcrumb .current {
+    color: #ffffff;
+  }
+  
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 700px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .content-container {
+    max-width: 800px;
+  }
+  
+  .last-updated {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  .policy-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .policy-content p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+  
+  .policy-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .policy-content li {
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+  }
+  
+  .policy-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .policy-content a:hover {
+    color: var(--accent-color);
+  }
+</style>

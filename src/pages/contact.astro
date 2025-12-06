@@ -1,0 +1,344 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Contact Us – Get a Quote | OnlineTranslation.ae"
+  description="Contact OnlineTranslation.ae for MOJ-certified legal translation services in Dubai. WhatsApp, call, or send us a message for a free quote."
+>
+  <section class="hero-section bg-dark" data-theme="dark">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">HOME</a>
+        <span class="separator">&gt;</span>
+        <span class="current">CONTACT</span>
+      </nav>
+      
+      <h1>Contact Us</h1>
+      <p class="hero-subtitle">Get in Touch</p>
+      <p class="hero-intro">The quickest way to reach us is via WhatsApp. Send your documents directly and receive a quote within minutes. For those who prefer other channels, we are also available by phone, email, or through the form below.</p>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-methods">
+          <h2>How to Reach Us</h2>
+          
+          <div class="contact-card primary-contact">
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-info">
+              <h3>WhatsApp (Recommended)</h3>
+              <p>The fastest way to get a quote. Send your documents directly.</p>
+              <a href="https://wa.me/971508620217" class="contact-link">+971 50 862 0217</a>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-info">
+              <h3>Phone</h3>
+              <p>Available Sunday to Thursday, 9 AM to 6 PM GST.</p>
+              <a href="tel:+971508620217" class="contact-link">+971 50 862 0217</a>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-info">
+              <h3>Email</h3>
+              <p>For formal correspondence and large file attachments.</p>
+              <a href="mailto:info@onlinetranslation.ae" class="contact-link">info@onlinetranslation.ae</a>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div class="contact-info">
+              <h3>Working Hours</h3>
+              <p>Sunday to Thursday: 9 AM - 6 PM GST<br>Friday and Saturday: By appointment</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-wrapper">
+          <h2>Send a Message</h2>
+          <p class="form-intro">For written quotes or general inquiries. We typically respond within 2 hours during business hours.</p>
+          
+          <form id="contactForm" class="contact-form" action="https://wa.me/971508620217" method="get">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required placeholder="Full name">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="+971 50 XXX XXXX">
+            </div>
+            
+            <div class="form-group">
+              <label for="service">Service Required</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option value="legal">Legal Translation</option>
+                <option value="certificate">Certificate Translation</option>
+                <option value="corporate">Corporate Translation</option>
+                <option value="attestation">Attestation / MOFAIC</option>
+                <option value="golden-visa">Golden Visa Documents</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="text" rows="4" placeholder="Describe your document or requirement..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fab fa-whatsapp"></i> Send via WhatsApp
+            </button>
+            
+            <p class="form-note">This form opens WhatsApp with your message pre-filled. You can also attach documents directly in WhatsApp.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    padding: 8rem 0 4rem;
+    background: var(--primary-color);
+  }
+  
+  .breadcrumb {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+  }
+  
+  .breadcrumb a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    color: #ffffff;
+  }
+  
+  .breadcrumb .separator {
+    margin: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .breadcrumb .current {
+    color: #ffffff;
+  }
+  
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 700px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+  
+  .contact-methods h2,
+  .contact-form-wrapper h2 {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: #f8f9fa;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .contact-card.primary-contact {
+    background: var(--primary-color);
+    color: #ffffff;
+  }
+  
+  .contact-card.primary-contact .contact-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: #25D366;
+  }
+  
+  .contact-card.primary-contact p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .contact-card.primary-contact .contact-link {
+    color: #ffffff;
+  }
+  
+  .contact-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: var(--primary-color);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  
+  .contact-info h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .contact-info p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .contact-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .contact-link:hover {
+    color: var(--accent-color);
+  }
+  
+  .form-intro {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background: var(--accent-color);
+    color: #ffffff;
+  }
+  
+  .btn-primary:hover {
+    background: #e0144c;
+    transform: translateY(-2px);
+  }
+  
+  .btn-full {
+    width: 100%;
+  }
+  
+  .form-note {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+</style>
+
+<script is:inline>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
+    
+    let text = `Hi, I'm ${name}.\n\n`;
+    if (service) text += `Service: ${service}\n`;
+    if (email) text += `Email: ${email}\n`;
+    if (phone) text += `Phone: ${phone}\n`;
+    if (message) text += `\n${message}`;
+    
+    window.open(`https://wa.me/971508620217?text=${encodeURIComponent(text)}`, '_blank');
+  });
+</script>

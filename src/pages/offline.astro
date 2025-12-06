@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="You're Offline | OnlineTranslation.ae"
+  description="You are currently offline. Please check your internet connection and try again."
+>
+  <section class="section bg-white" style="min-height: 60vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="text-center">
+        <div style="font-size: 5rem; color: var(--navy); margin-bottom: 2rem;">
+          <i class="fas fa-wifi-slash"></i>
+        </div>
+        <h1 class="section-title" style="margin-bottom: 1.5rem;">You're Currently Offline</h1>
+        <p class="section-lead" style="max-width: 600px; margin: 0 auto 2rem;">
+          It looks like your internet connection has dropped. Please check your connection and try again.
+        </p>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">
+          If you need urgent assistance, you can still reach us on WhatsApp when your connection is restored.
+        </p>
+        <div class="hero-cta-group" style="justify-content: center;">
+          <button onclick="window.location.reload()" class="hero-cta exodus-cta" style="cursor: pointer;">
+            <i class="fas fa-redo"></i> Try Again
+          </button>
+          <a href="/" class="hero-cta-secondary">Return to Homepage</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

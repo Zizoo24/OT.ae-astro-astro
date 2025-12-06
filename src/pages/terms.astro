@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Terms of Service | OnlineTranslation.ae"
+  description="Terms of service for OnlineTranslation.ae translation services. Service conditions, delivery, payments, and client responsibilities."
+>
+  <section class="hero-section bg-dark" data-theme="dark">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">HOME</a>
+        <span class="separator">&gt;</span>
+        <span class="current">TERMS OF SERVICE</span>
+      </nav>
+      
+      <h1>Terms of Service</h1>
+      <p class="hero-subtitle">Service Agreement</p>
+      <p class="hero-intro">These terms govern the use of our translation services. By engaging our services, you agree to these terms.</p>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="container content-container">
+      <div class="policy-content">
+        <p class="last-updated">Last updated: December 2024</p>
+        
+        <h2>1. Services</h2>
+        <p>OnlineTranslation.ae provides legal translation services, document attestation assistance, and related document processing services. Our translations are certified by Ministry of Justice (MOJ) licensed translators through our partner, Arkan Legal Translation.</p>
+        
+        <h2>2. Ordering and Quotes</h2>
+        <p>Quotes are provided based on the documents submitted. Final pricing may adjust if the actual document differs from initial samples. A quote is valid for 7 days from issue unless otherwise stated. Orders are confirmed upon receipt of payment or written confirmation.</p>
+        
+        <h2>3. Document Requirements</h2>
+        <p>For accurate translation, we require:</p>
+        <ul>
+          <li>Clear, legible copies of original documents</li>
+          <li>Complete pages (partial documents may result in incomplete translations)</li>
+          <li>Indication of any specific terminology preferences</li>
+          <li>Notification of any urgent deadlines at the time of ordering</li>
+        </ul>
+        
+        <h2>4. Delivery and Timelines</h2>
+        <p>Standard turnaround times are provided at the time of quotation. Express services are available for urgent requirements at additional cost. Delivery times begin once full payment is received and clear document copies are provided. We make reasonable efforts to meet stated deadlines but cannot guarantee delivery times for circumstances beyond our control.</p>
+        
+        <h2>5. Certification and Accuracy</h2>
+        <p>Our translations are certified by MOJ-licensed translators. We translate content as presented in the source document. If the source document contains errors, the translation will reflect those errors unless corrections are specifically requested and documented.</p>
+        
+        <h2>6. Payment Terms</h2>
+        <p>Payment is required in advance for standard services. Corporate clients may arrange account terms by prior agreement. We accept bank transfer, credit/debit cards, and other payment methods as indicated. All prices are in UAE Dirhams (AED) unless otherwise stated.</p>
+        
+        <h2>7. Revisions and Corrections</h2>
+        <p>If you identify errors in our translation, please notify us within 7 days of delivery. We will correct genuine translation errors at no additional charge. Changes to source material, preference changes, or additions to the original scope may incur additional fees.</p>
+        
+        <h2>8. Confidentiality</h2>
+        <p>We maintain strict confidentiality of all client documents and information. All staff and translators are bound by non-disclosure agreements. Documents are securely stored and deleted within 30 days of project completion unless extended retention is requested.</p>
+        
+        <h2>9. Liability</h2>
+        <p>While we strive for accuracy, our liability is limited to the value of the service fee paid. We are not liable for any consequential losses arising from the use of translations. Clients are responsible for verifying that translations meet their specific requirements before submission to authorities.</p>
+        
+        <h2>10. Cancellations</h2>
+        <p>Orders may be cancelled before work begins for a full refund. If work has commenced, cancellation fees may apply based on work completed. Rush orders may have different cancellation terms as specified at the time of ordering.</p>
+        
+        <h2>11. Intellectual Property</h2>
+        <p>Upon full payment, clients receive the rights to use the translated documents for their intended purpose. Original documents remain the property of the client. We may retain copies for quality assurance and legal compliance purposes.</p>
+        
+        <h2>12. Governing Law</h2>
+        <p>These terms are governed by the laws of the United Arab Emirates. Any disputes will be subject to the jurisdiction of the courts of Dubai, UAE.</p>
+        
+        <h2>13. Changes to Terms</h2>
+        <p>We may update these terms from time to time. Continued use of our services after changes constitutes acceptance of the updated terms.</p>
+        
+        <h2>Contact</h2>
+        <p>For questions about these terms, contact us at:</p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:info@onlinetranslation.ae">info@onlinetranslation.ae</a><br>
+          <strong>WhatsApp:</strong> <a href="https://wa.me/971508620217">+971 50 862 0217</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    padding: 8rem 0 4rem;
+    background: var(--primary-color);
+  }
+  
+  .breadcrumb {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+  }
+  
+  .breadcrumb a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    color: #ffffff;
+  }
+  
+  .breadcrumb .separator {
+    margin: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .breadcrumb .current {
+    color: #ffffff;
+  }
+  
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 700px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .content-container {
+    max-width: 800px;
+  }
+  
+  .last-updated {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  .policy-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .policy-content p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+  
+  .policy-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .policy-content li {
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+  }
+  
+  .policy-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .policy-content a:hover {
+    color: var(--accent-color);
+  }
+</style>

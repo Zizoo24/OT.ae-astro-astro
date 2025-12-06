@@ -83,6 +83,24 @@ The system is designed as a "Digital Concierge" with a "WhatsApp-First Architect
 
 **Service Worker:** Currently at v140
 
+**Fidelity Restoration - December 6, 2025:**
+- **Mobile sidebar CSS class fixes:** JavaScript uses `.is-open`, `.is-visible`, `.is-active` but CSS only had `.active`, `.expanded`. Fixed all selectors:
+  - `.sidebar-menu.is-open` for sidebar open state
+  - `.sidebar-accordion-content.is-open` for accordion content
+  - `.sidebar-overlay.is-visible` for overlay
+  - `.search-overlay.is-open` for search overlay
+  - `.sidebar-section-title.is-active .accordion-icon` for chevron rotation
+- **Dark mode sidebar contrast:** Added explicit styles for sidebar elements:
+  - `.sidebar-section-title` - white text (85% opacity)
+  - `.accordion-icon` - white (60% opacity), coral on hover/active
+  - `.sidebar-cta.secondary` - white text on dark background
+- **Footer.astro restored:** Now matches original static HTML exactly:
+  - Logo emblem, MOJ certification text, Arkan partnership link
+  - 4-column grid: footer-brand, footer-links, footer-services, footer-contact
+  - Social icons (WhatsApp, Instagram, LinkedIn)
+  - Footer bottom band with copyright and policy links
+- **Header.astro cleanup:** Removed orphaned `.mobile-nav-overlay` div that had no CSS
+
 **Astro Migration - December 6, 2025:**
 - **Framework:** Migrated from static HTML to Astro 5.x for easier content management
 - **Project structure:** src/layouts/, src/components/, src/pages/, src/content/, src/styles/

@@ -1,0 +1,179 @@
+VERCEL PRODUCTION CACHE ISSUE - COMPLETE FIX REPORT
+====================================================
+Date: December 6, 2025
+Project: OnlineTranslation.ae
+
+
+THE PROBLEM
+-----------
+Mobile navigation toggles (Menu, Search, Sidebar, Theme) worked perfectly 
+in dev preview but failed on Vercel production. Clicking them either did 
+nothing or caused the page to scroll/reload.
+
+
+ROOT CAUSE
+----------
+The old service worker cached JavaScript files and continued serving stale 
+code even after new deployments. Browsers controlled by the old worker 
+never fetched updated files, creating an unbreakable cache loop.
+
+
+ATTEMPTED FIXES
+===============
+
+ATTEMPT 1: Service Worker Cleanup
+---------------------------------
+What we did: 
+  - Replaced caching service worker with a "self-destructing" version
+  - New worker unregisters itself and clears all caches on activation
+
+Why it failed: 
+  - The new service worker only runs if browsers fetch it
+  - Browsers controlled by old worker kept serving cached content
+  - They never downloaded the cleanup version
+
+Files changed:
+  - public/service-worker.js
+
+
+ATTEMPT 2: Vercel Cache Headers
+-------------------------------
+What we did:
+  - Set max-age=0, must-revalidate for CSS and JS files
+  - Set no-cache, no-store for service worker file
+  - Set must-revalidate for HTML pages via regex pattern
+
+Why it wasn't enough:
+  - Vercel CDN had already cached old assets
+  - Cache headers only affect new requests
+  - Didn't clear what was already distributed across edge nodes
+
+Files changed:
+  - vercel.json
+
+
+ATTEMPT 3: Convert Anchors to Buttons
+-------------------------------------
+What we did:
+  - Changed <a href="#"> toggle elements to <button type="button">
+  - Applied to Menu, Search, Sidebar, and Theme toggles
+
+Why we did it:
+  - When JavaScript fails, anchor tags with href="#" navigate to page top
+  - Buttons do nothing when clicked without JS - safer fallback
+
+Result:
+  - Good architectural improvement
+  - Didn't solve the core caching issue
+
+Files changed:
+  - src/components/MobileShell.astro
+  - src/components/Header.astro
+  - public/styles/sticky-mobile.css
+
+
+ATTEMPT 4: Script Loading Order
+-------------------------------
+What we did:
+  - Added defer attribute to main.js in BaseLayout.astro
+  - Ensures DOM is fully parsed before script executes
+
+Why we did it:
+  - Suspected timing issue where scripts ran before elements existed
+
+Result:
+  - Correct fix for script loading order
+  - Browsers still weren't getting new code due to caching
+
+Files changed:
+  - src/layouts/BaseLayout.astro
+
+
+ATTEMPT 5: Accessible Focus States
+----------------------------------
+What we did:
+  - Added :focus-visible styling with box-shadow focus rings
+  - Fixed accessibility regression from outline:none
+
+Why we did it:
+  - Architect review flagged missing keyboard focus indicators
+  - WCAG compliance requirement
+
+Result:
+  - Fixed accessibility issue
+  - Not related to caching problem
+
+Files changed:
+  - public/styles/sticky-mobile.css
+
+
+ATTEMPT 6: Inline Cache Buster + Versioned Filenames (FINAL FIX)
+----------------------------------------------------------------
+What we did:
+  1. Added inline script in <head> that runs immediately:
+     - Unregisters all service workers
+     - Clears all CacheStorage caches
+  
+  2. Renamed JavaScript files:
+     - main.js -> main-v2.js
+     - navigation.js -> navigation-v2.js
+  
+  3. Updated all script references in BaseLayout.astro
+
+Why this should work:
+  - Inline script runs before any deferred scripts
+  - Breaks service worker control immediately on page load
+  - Renamed files are URLs that Vercel CDN has never cached
+  - Every visitor gets fresh code on next page load
+
+Files changed:
+  - src/layouts/BaseLayout.astro
+  - public/scripts/main.js -> main-v2.js (renamed)
+  - public/scripts/navigation.js -> navigation-v2.js (renamed)
+
+
+SUMMARY TABLE
+=============
+Fix                          | Target              | Status
+-----------------------------|---------------------|------------------
+Self-destructing SW          | Old SW caches       | Partial
+Vercel cache headers         | CDN caching         | Partial
+Anchors to Buttons           | JS failure fallback | Complete
+Script defer attribute       | Load order timing   | Complete
+Focus-visible styling        | Accessibility       | Complete
+Inline cache buster          | Force cache clear   | Pending deploy
+Versioned filenames          | CDN cache bust      | Pending deploy
+
+
+NEXT STEPS
+==========
+1. Publish to Vercel
+2. Test in incognito/private browser window
+3. Verify mobile toggles work
+4. Check DevTools > Application > Service Workers shows "No service worker"
+5. Check Network tab shows main-v2.js loading (not main.js)
+
+
+TECHNICAL NOTES
+===============
+The inline cache buster code added to BaseLayout.astro <head>:
+
+  (function() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        registrations.forEach(function(registration) {
+          registration.unregister();
+        });
+      });
+    }
+    if ('caches' in window) {
+      caches.keys().then(function(names) {
+        names.forEach(function(name) {
+          caches.delete(name);
+        });
+      });
+    }
+  })();
+
+This runs synchronously before any deferred scripts, ensuring cache 
+cleanup happens first regardless of what the old service worker cached.

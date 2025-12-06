@@ -128,77 +128,11 @@ const { isHomepage = false } = Astro.props;
   </a>
 </div>
 
-<!-- Mobile Navigation Overlay -->
-<div class="mobile-nav-overlay" id="mobileNavOverlay">
-  <div class="mobile-nav-container">
-    <div class="mobile-nav-header">
-      <a href="/" class="mobile-logo">
-        <span class="logo-text">Online<span class="logo-suffix">Translation</span><span class="logo-domain">.ae</span></span>
-      </a>
-      <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-    <nav class="mobile-nav-menu">
-      <a href="/" class="mobile-nav-link">Home</a>
-      <a href="/services/" class="mobile-nav-link">Services</a>
-      <a href="/services/legal-translation/" class="mobile-nav-link mobile-nav-link--sub">Legal Translation</a>
-      <a href="/services/certificate-translation/" class="mobile-nav-link mobile-nav-link--sub">Certificate Translation</a>
-      <a href="/services/golden-visa-translation/" class="mobile-nav-link mobile-nav-link--sub">Golden Visa</a>
-      <a href="/personal/vital-records/birth/" class="mobile-nav-link">Birth Certificate</a>
-      <a href="/personal/vital-records/marriage/" class="mobile-nav-link">Marriage Certificate</a>
-      <a href="/legal/corporate/moa/" class="mobile-nav-link">MOA Translation</a>
-      <a href="/legal/corporate/poa/" class="mobile-nav-link">Power of Attorney</a>
-      <a href="/locations/" class="mobile-nav-link">Locations</a>
-      <a href="/industries/" class="mobile-nav-link">Industries</a>
-      <a href="/resources/" class="mobile-nav-link">Resources</a>
-      <a href="/contact/" class="mobile-nav-link">Contact</a>
-    </nav>
-    <div class="mobile-nav-cta">
-      <a href="https://wa.me/971508620217" class="btn btn--whatsapp btn--lg btn--full">
-        <i class="fab fa-whatsapp"></i> Send Documents on WhatsApp
-      </a>
-      <a href="tel:+971508620217" class="btn btn--outline btn--full">
-        <i class="fas fa-phone-alt"></i> Call +971 50 862 0217
-      </a>
-    </div>
-  </div>
-</div>
-
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const mobileToggle = document.getElementById('mobileMenuToggle');
-    const mobileClose = document.getElementById('mobileCloseBtn');
-    const mobileOverlay = document.getElementById('mobileNavOverlay');
     const header = document.getElementById('header');
 
-    function openMobileNav() {
-      mobileOverlay?.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeMobileNav() {
-      mobileOverlay?.classList.remove('is-open');
-      document.body.style.overflow = '';
-    }
-
-    mobileToggle?.addEventListener('click', (e) => {
-      e.preventDefault();
-      openMobileNav();
-    });
-
-    mobileClose?.addEventListener('click', closeMobileNav);
-
-    mobileOverlay?.addEventListener('click', (e) => {
-      if (e.target === mobileOverlay) closeMobileNav();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeMobileNav();
-    });
-
     // Scroll behavior for header
-    let lastScroll = 0;
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
       if (currentScroll > 50) {
@@ -206,7 +140,6 @@ const { isHomepage = false } = Astro.props;
       } else {
         header?.classList.remove('scrolled');
       }
-      lastScroll = currentScroll;
     });
 
     // Desktop dropdown hover behavior

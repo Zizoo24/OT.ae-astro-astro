@@ -145,13 +145,35 @@ Inline cache buster          | Force cache clear   | Pending deploy
 Versioned filenames          | CDN cache bust      | Pending deploy
 
 
+ATTEMPT 7: Remove is:inline from Script Tags (ACTUAL ROOT CAUSE FIX)
+-------------------------------------------------------------------
+What we did:
+  - Removed is:inline attribute from all deferred external scripts
+  - Kept is:inline only on os-detect.js (needs to run before render)
+  - Kept inline cache buster (no src, pure inline code)
+
+Why this was the real fix:
+  - is:inline + src on public assets causes Astro to DROP the scripts during build
+  - In dev mode, Vite serves files directly - everything works
+  - During astro build, these scripts were silently removed from HTML
+  - The Menu toggle worked because MobileShell has inline code for drawer
+  - But accordions/search/dark mode failed because main-v2.js never loaded
+
+Files changed:
+  - src/layouts/BaseLayout.astro (removed is:inline from 8 script tags)
+
+Verification:
+  - npm run build completed successfully
+  - grep confirmed scripts appear in dist/index.html
+
+
 NEXT STEPS
 ==========
 1. Publish to Vercel
 2. Test in incognito/private browser window
 3. Verify mobile toggles work
 4. Check DevTools > Application > Service Workers shows "No service worker"
-5. Check Network tab shows main-v2.js loading (not main.js)
+5. Check Network tab shows main-v2.js loading with HTTP 200
 
 
 TECHNICAL NOTES

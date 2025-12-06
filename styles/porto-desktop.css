@@ -359,8 +359,8 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     padding: 6px 14px;
     background: transparent;
-    border: 1px solid rgba(255,255,255,0.4);
-    color: var(--text-light);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
     font-family: var(--font-primary);
     font-size: 11px;
     font-weight: 600;
@@ -372,9 +372,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 20px;
 }
 
+/* Scrolled state - white text for navy background */
+.header-desktop.exodus-header.scrolled .header-contact-btn {
+    border-color: rgba(255,255,255,0.4);
+    color: var(--text-light);
+}
+
 .header-contact-btn:hover {
     background: var(--accent-color);
     border-color: var(--accent-color);
+    color: var(--text-light);
 }
 
 
@@ -414,6 +421,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-desktop.exodus-header.scrolled .nav-link {
+    color: var(--text-light);
+}
+
+.header-desktop.exodus-header.scrolled .nav-link i {
     color: var(--text-light);
 }
 
@@ -522,17 +533,25 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-light);
+    color: var(--primary-color);
     font-size: 12px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: transparent;
+    border: 1px solid var(--primary-color);
     border-radius: 4px;
     transition: var(--transition);
+}
+
+/* Scrolled state - white icons for navy background */
+.header-desktop.exodus-header.scrolled .social-icons a {
+    color: var(--text-light);
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.3);
 }
 
 .exodus-header .social-icons a:hover {
     background: var(--accent-color);
     border-color: var(--accent-color);
+    color: var(--text-light);
     transform: translateY(-3px);
 }
 
@@ -570,16 +589,23 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
         width: 45px;
         height: 45px;
-        background: rgba(255,255,255,0.15);
-        border: 1px solid rgba(255,255,255,0.3);
+        background: transparent;
+        border: 1px solid var(--primary-color);
         border-radius: 8px;
-        color: var(--text-light);
+        color: var(--primary-color);
         font-size: 20px;
         text-decoration: none;
         transition: var(--transition);
     }
+    /* Scrolled state - white for navy background */
+    .header-desktop.exodus-header.scrolled .menu-toggle-btn.mobile-only {
+        background: rgba(255,255,255,0.15);
+        border-color: rgba(255,255,255,0.3);
+        color: var(--text-light);
+    }
     .menu-toggle-btn.mobile-only:hover {
         background: var(--accent-color);
+        color: var(--text-light);
     }
 }
 
@@ -786,7 +812,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     padding-top: 140px;
     padding-bottom: 120px;
-    overflow: hidden;
+    overflow: visible; /* Changed from hidden - allows overlap cards to display */
 }
 
 .hero-section.exodus-hero {
@@ -794,7 +820,8 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 160px;
     padding-bottom: 180px;
     position: relative;
-    margin-bottom: 120px;
+    margin-bottom: 80px; /* Reduced from 120px - cards now visible, less gap needed */
+    overflow: visible; /* Ensure overlap cards aren't clipped */
 }
 
 .hero-section.exodus-hero .container {
@@ -2231,7 +2258,7 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 .translator-section {
-    padding: 100px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--bg-alt);
 }
 
@@ -2364,7 +2391,7 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 .team-section {
-    padding: 100px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--bg-alt);
 }
 
@@ -2545,7 +2572,7 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 .specialists-section {
-    padding: 100px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--bg-alt);
 }
 
@@ -2829,7 +2856,7 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 .services-section.exodus-services {
-    padding: 100px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--bg-light);
 }
 
@@ -2934,7 +2961,7 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 .languages-section.exodus-languages {
-    padding: 100px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--primary-color);
 }
 
@@ -3251,7 +3278,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* About Section */
 .about-section {
-    padding: 120px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--bg-white);
 }
 
@@ -3434,7 +3461,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Services Section */
 .services-section {
-    padding: 120px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--bg-light);
 }
 
@@ -3598,7 +3625,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Why Choose Us Section - Exodus Divi Style */
 .why-section {
-    padding: 100px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--bg-alt);
     position: relative;
 }
@@ -3679,7 +3706,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Process Section */
 .process-section {
-    padding: 120px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--bg-white);
 }
 
@@ -3746,7 +3773,7 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 .process-section.exodus-process {
-    padding: 100px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--bg-light);
 }
 
@@ -3853,7 +3880,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Testimonials Section */
 .testimonials-section {
-    padding: 120px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--bg-light);
 }
 
@@ -3916,7 +3943,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* FAQ Section - HTML5 Native Accordions */
 .faq-section {
-    padding: 120px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: var(--bg-white);
 }
 
@@ -4088,7 +4115,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Contact Section */
 .contact-section {
-    padding: 120px 0;
+    /* Padding controlled by .section class in base-architecture.css */
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     color: var(--text-light);
     position: relative;
@@ -7643,5 +7670,127 @@ body.search-open {
     
     .industry-cards-4 {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   POPULAR DOCUMENTS SECTION
+   ============================================ */
+
+.popular-docs-grid {
+    --grid-min: 280px;
+}
+
+.popular-doc-card {
+    text-decoration: none;
+    background: var(--bg-white);
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.popular-doc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.popular-doc-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--primary-color), #1a3a5c);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.popular-doc-icon.accent {
+    background: linear-gradient(135deg, var(--accent-color), #ff4d7a);
+}
+
+.popular-doc-icon i {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.popular-doc-content h4 {
+    color: var(--primary-color);
+    margin: 0 0 4px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.popular-doc-content p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.popular-docs-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.popular-docs-footer p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.btn-accent {
+    background: var(--accent-color);
+    color: white;
+}
+
+.btn-accent:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 22, 84, 0.3);
+}
+
+/* ============================================
+   FORM ACCESSIBILITY IMPROVEMENTS
+   ============================================ */
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+}
+
+.contact-section .form-group input,
+.contact-section .form-group textarea {
+    border-radius: 8px;
+}
+
+.contact-section .submit-btn {
+    border-radius: 8px;
+    margin-bottom: 100px; /* Space above mobile bottom nav */
+}
+
+@media (min-width: 768px) {
+    .contact-section .submit-btn {
+        margin-bottom: 0;
     }
 }

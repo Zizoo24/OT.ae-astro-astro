@@ -94,9 +94,63 @@ The site uses a Divi-style grid architecture defined in `styles/base-architectur
 
 ## Recent Changes (December 2025)
 
+**Homepage UX Architecture Fix - December 6, 2025:**
+- **Hero Section:** Removed `overflow: hidden` from `.hero-section` and `.hero-section.exodus-hero` to fix overlap card clipping
+- **Header Contrast:** Fixed header elements (contact btn, social icons, mobile toggle) to be navy initially, white when scrolled
+  - Added `.header-desktop.exodus-header.scrolled` states for all interactive header elements
+- **Section Spacing Standardization:** Removed competing `padding: 100px/120px` from 12+ sections, now controlled by base-architecture.css `.section` class (80px)
+  - Fixed sections: specialists, services, why, process, testimonials, faq, about, contact, translator, team, languages, exodus-process
+- **Popular Documents:** Extracted all inline styles to new CSS classes (`.popular-doc-card`, `.popular-doc-icon`, `.popular-doc-content`)
+- **Form Accessibility:** Added visible `<label>` elements to contact form, standardized border-radius, added mobile bottom nav padding
+- **Footer:** Updated copyright 2024 → 2025
+- **About Section:** Renamed "Why Choose Us" → "Our Approach" to avoid duplicate section naming
+- **New CSS Classes:** `.btn`, `.btn-accent`, `.popular-docs-footer`
+- **Nav Link Icon:** Added scrolled state override for dropdown arrow icons
+- Service worker bumped to v134
+
+**Site-Wide Deployment Checklist (for remaining 50 pages):**
+When applying the base architecture pattern to other pages:
+
+1. **Section Classes:** Add `.section` class to all main content sections
+   - Use `.section--sm` for compact sections (50px padding)
+   - Use `.bg-white`, `.bg-light`, `.bg-alt`, `.bg-dark`, `.bg-accent` for backgrounds
+   
+2. **Container Usage:** Wrap content in `.container` (1200px max)
+   - Use `.container--narrow` (900px) for text-heavy content
+   
+3. **Grid Layouts:** Use base-architecture grid classes
+   - `.grid-2`, `.grid-3`, `.grid-4`, `.grid-5` for fixed columns
+   - `.grid--auto-fit` for responsive behavior
+   
+4. **Hero Sections:** Keep using component classes, not `.section`
+   - `.hero-section.exodus-hero` handles its own padding
+   
+5. **Remove Inline Styles:** Extract to CSS classes in porto-desktop.css
+
+6. **Verify Schema Markup:** Ensure each page has proper structured data
+
+7. **Test Scroll Behavior:** Verify header transitions correctly on scroll
+
+**Site-Wide Deployment Pattern (for remaining 50 pages):**
+```html
+<!-- Required section structure -->
+<section class="section bg-[white|light|alt|dark|accent] [specific-section-class]">
+  <div class="container">
+    <!-- Content here -->
+  </div>
+</section>
+
+<!-- For compact sections (50px padding) -->
+<section class="section--sm bg-accent stats-section">
+
+<!-- For hero sections (use component classes, not .section) -->
+<section class="hero-section exodus-hero">
+```
+
 **Base Architecture CSS Implementation - December 6, 2025:**
 - Created `styles/base-architecture.css` with Divi-style grid system
-- Section primitives (`.section`, `.section--sm`, `.section--hero`) with background utilities
+- Section primitives: `.section` (80px padding), `.section--sm` (50px), `.section--lg` (100px), `.section--flush` (0)
+- Background utilities: `.bg-white`, `.bg-light`, `.bg-alt`, `.bg-dark`, `.bg-accent`
 - Container system (`.container`, `.container--narrow`, `.container--wide`)
 - CSS Grid utilities (`.grid-2` through `.grid-5`, `.grid--auto-fit`)
 - Spacing scale utilities (`.mt-sm`, `.mb-lg`, `.py-xl`, etc.)

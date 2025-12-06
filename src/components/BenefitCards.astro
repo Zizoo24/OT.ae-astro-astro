@@ -1,0 +1,105 @@
+---
+import Icon from './Icon.astro';
+
+interface Benefit {
+  icon: string;
+  title: string;
+  text: string;
+}
+
+interface Props {
+  benefits: Benefit[];
+}
+
+const { benefits } = Astro.props;
+---
+
+<section class="ot-benefits-section">
+  <div class="container">
+    <div class="ot-benefits-grid">
+      {benefits.map(benefit => (
+        <div class="ot-benefit-card">
+          <div class="ot-benefit-icon">
+            <Icon name={benefit.icon} size="28" />
+          </div>
+          <h3 class="ot-benefit-title">{benefit.title}</h3>
+          <p class="ot-benefit-text">{benefit.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .ot-benefits-section {
+    padding: 4rem 0;
+    background: #ffffff;
+  }
+  
+  .ot-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .ot-benefit-card {
+    background: var(--bg-light, #f8f9fa);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ot-benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  }
+  
+  .ot-benefit-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--primary-color, #0E2B48) 0%, #1a3d5c 100%);
+    color: #ffffff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+  }
+  
+  .ot-benefit-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary-color, #0E2B48);
+    margin-bottom: 0.75rem;
+  }
+  
+  .ot-benefit-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted, #666);
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .ot-benefits-section {
+      padding: 3rem 0;
+    }
+    
+    .ot-benefits-grid {
+      gap: 1rem;
+    }
+    
+    .ot-benefit-card {
+      padding: 1.5rem 1.25rem;
+    }
+    
+    .ot-benefit-icon {
+      width: 48px;
+      height: 48px;
+    }
+  }
+</style>

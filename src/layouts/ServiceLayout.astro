@@ -1,5 +1,9 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import TrustStrip from '../components/TrustStrip.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import BenefitCards from '../components/BenefitCards.astro';
+import AccordionSection from '../components/AccordionSection.astro';
 
 interface SnapshotItem {
   icon: string;
@@ -17,6 +21,30 @@ interface FAQ {
   answer: string;
 }
 
+interface ProcessStep {
+  number?: number;
+  title: string;
+  text: string;
+  icon?: string;
+}
+
+interface BenefitCard {
+  icon: string;
+  title: string;
+  text: string;
+}
+
+interface AccordionItem {
+  heading: string;
+  body: string;
+}
+
+interface AccordionGroup {
+  title: string;
+  id?: string;
+  items: AccordionItem[];
+}
+
 interface Props {
   title: string;
   description: string;
@@ -29,6 +57,11 @@ interface Props {
   breadcrumbs: Breadcrumb[];
   faqs?: FAQ[];
   serviceType?: string;
+  trustStrip?: string[];
+  processSteps?: ProcessStep[];
+  processTitle?: string;
+  benefitCards?: BenefitCard[];
+  accordionSections?: AccordionGroup[];
 }
 
 const { 
@@ -42,7 +75,12 @@ const {
   snapshot,
   breadcrumbs,
   faqs = [],
-  serviceType = 'Document Translation'
+  serviceType = 'Document Translation',
+  trustStrip,
+  processSteps,
+  processTitle = 'How it works',
+  benefitCards,
+  accordionSections = []
 } = Astro.props;
 
 const siteUrl = 'https://onlinetranslation.ae';
@@ -146,7 +184,31 @@ const faqSchema = faqs.length > 0 ? {
     </div>
   </section>
 
-  <!-- Main Content -->
+  <!-- Trust Strip (Optional) -->
+  {trustStrip && trustStrip.length > 0 && (
+    <TrustStrip items={trustStrip} />
+  )}
+
+  <!-- Process Steps (Optional) -->
+  {processSteps && processSteps.length > 0 && (
+    <ProcessSteps title={processTitle} steps={processSteps} />
+  )}
+
+  <!-- Benefit Cards (Optional) -->
+  {benefitCards && benefitCards.length > 0 && (
+    <BenefitCards benefits={benefitCards} />
+  )}
+
+  <!-- Accordion Sections (Optional) -->
+  {accordionSections.map(section => (
+    <AccordionSection 
+      title={section.title} 
+      items={section.items} 
+      id={section.id}
+    />
+  ))}
+
+  <!-- Main Content Slot -->
   <slot />
 
   <!-- FAQ Section -->

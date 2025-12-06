@@ -1,39 +1,19 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
+# Astro build output
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
 
-# Virtual environments
+# Node
+node_modules/
+package-lock.json
+
+# Environment
 .env
-.venv
-env/
-venv/
-ENV/
+.env.*
+!.env.example
 
 # OS files
 .DS_Store
 Thumbs.db
 desktop.ini
-
-# Logs
-*.log
 
 # IDE
 .idea/
@@ -42,9 +22,9 @@ desktop.ini
 *.swo
 *~
 
-# Dependencies
-node_modules/
-package-lock.json
+# Logs
+*.log
+npm-debug.log*
 
 # Replit
 .cache/
@@ -53,5 +33,38 @@ package-lock.json
 .replit
 replit.nix
 
-# Temp files from chat
+# Temp/Assets from chat
 attached_assets/
+
+# OLD STATIC FILES - DO NOT INCLUDE IN ASTRO REPO
+# These are legacy files from the pre-Astro static site
+index.html
+contact.html
+privacy.html
+terms.html
+404.html
+offline.html
+server.py
+service-worker.js
+browserconfig.xml
+github-raw-links.txt
+
+# Old static HTML directories
+industries/
+legal/
+locations/
+personal/
+personal-documents/
+resources/
+services/
+specialized/
+legal-translation-dubai/
+
+# Old styles directory (styles are now in src/styles/)
+styles/
+
+# Old images directory (images are now in public/images/)
+images/
+
+# Old scripts
+scripts/

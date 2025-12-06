@@ -1,0 +1,216 @@
+---
+interface AccordionItem {
+  heading: string;
+  body: string;
+}
+
+interface Props {
+  title: string;
+  items: AccordionItem[];
+  id?: string;
+}
+
+const { title, items, id } = Astro.props;
+const sectionId = id || title.toLowerCase().replace(/\s+/g, '-');
+---
+
+<section class="ot-accordion-section" id={sectionId}>
+  <div class="container">
+    <h2 class="ot-accordion-title">{title}</h2>
+    <div class="ot-accordion" data-accordion>
+      {items.map((item, i) => (
+        <article class="ot-accordion-item">
+          <button 
+            class="ot-accordion-header" 
+            type="button"
+            aria-expanded="false"
+            aria-controls={`${sectionId}-panel-${i}`}
+          >
+            <span>{item.heading}</span>
+            <span class="ot-accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div 
+            class="ot-accordion-body" 
+            id={`${sectionId}-panel-${i}`}
+            role="region"
+          >
+            <div class="ot-accordion-content" set:html={item.body} />
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-accordion]').forEach(accordion => {
+      const items = accordion.querySelectorAll('.ot-accordion-item');
+      
+      items.forEach(item => {
+        const header = item.querySelector('.ot-accordion-header') as HTMLButtonElement;
+        const body = item.querySelector('.ot-accordion-body') as HTMLElement;
+        
+        if (!header || !body) return;
+        
+        body.style.maxHeight = '0px';
+        
+        header.addEventListener('click', () => {
+          const isOpen = item.classList.contains('is-open');
+          
+          items.forEach(otherItem => {
+            const otherBody = otherItem.querySelector('.ot-accordion-body') as HTMLElement;
+            const otherHeader = otherItem.querySelector('.ot-accordion-header') as HTMLButtonElement;
+            if (otherItem !== item && otherBody && otherHeader) {
+              otherItem.classList.remove('is-open');
+              otherBody.style.maxHeight = '0px';
+              otherHeader.setAttribute('aria-expanded', 'false');
+            }
+          });
+          
+          if (isOpen) {
+            item.classList.remove('is-open');
+            body.style.maxHeight = '0px';
+            header.setAttribute('aria-expanded', 'false');
+          } else {
+            item.classList.add('is-open');
+            body.style.maxHeight = body.scrollHeight + 'px';
+            header.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .ot-accordion-section {
+    padding: 4rem 0;
+    background: var(--bg-light, #f8f9fa);
+  }
+  
+  .ot-accordion-section:nth-child(even) {
+    background: #ffffff;
+  }
+  
+  .ot-accordion-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--primary-color, #0E2B48);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  
+  .ot-accordion {
+    max-width: 800px;
+  }
+  
+  .ot-accordion-item {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+  
+  .ot-accordion-section:nth-child(even) .ot-accordion-item {
+    background: var(--bg-light, #f8f9fa);
+  }
+  
+  .ot-accordion-header {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color, #0E2B48);
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+  }
+  
+  .ot-accordion-header:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+  
+  .ot-accordion-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color, #FF1654);
+    color: var(--accent-color, #FF1654);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 400;
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  }
+  
+  .ot-accordion-item.is-open .ot-accordion-icon {
+    transform: rotate(45deg);
+    background: var(--accent-color, #FF1654);
+    color: #ffffff;
+  }
+  
+  .ot-accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .ot-accordion-content {
+    padding: 0 1.5rem 1.25rem;
+  }
+  
+  .ot-accordion-content :global(p) {
+    margin: 0 0 0.75rem;
+    line-height: 1.7;
+    color: var(--text-muted, #666);
+  }
+  
+  .ot-accordion-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  
+  .ot-accordion-content :global(ul),
+  .ot-accordion-content :global(ol) {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+  }
+  
+  .ot-accordion-content :global(li) {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: var(--text-muted, #666);
+  }
+  
+  @media (max-width: 768px) {
+    .ot-accordion-section {
+      padding: 3rem 0;
+    }
+    
+    .ot-accordion-header {
+      padding: 1rem 1.25rem;
+      font-size: 0.95rem;
+    }
+    
+    .ot-accordion-content {
+      padding: 0 1.25rem 1rem;
+    }
+    
+    .ot-accordion-icon {
+      width: 24px;
+      height: 24px;
+      font-size: 1.1rem;
+    }
+  }
+</style>

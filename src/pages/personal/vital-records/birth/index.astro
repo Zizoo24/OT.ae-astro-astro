@@ -20,6 +20,89 @@ const pageData = {
     { name: "Vital Records", url: "/personal/vital-records/" },
     { name: "Birth Certificate Translation", url: "/personal/vital-records/birth/" }
   ],
+  
+  trustStrip: [
+    "MOJ-licensed partner",
+    "Court-ready in Dubai & UAE",
+    "WhatsApp concierge support"
+  ],
+  
+  processSteps: [
+    {
+      title: "Send a clear photo or scan",
+      text: "Front and back of the birth certificate, plus any attestation stamps. Phone photos work if quality is clear."
+    },
+    {
+      title: "We prepare your translation",
+      text: "MOJ-licensed legal translator creates a court-ready draft with proper formatting for UAE authorities."
+    },
+    {
+      title: "Pickup or delivery",
+      text: "Collect in Dubai or arrange courier to your address. Digital PDF sent immediately upon completion."
+    }
+  ],
+  
+  benefitCards: [
+    {
+      icon: "court",
+      title: "Designed for UAE procedures",
+      text: "Translations drafted with UAE courts, immigration offices, and notaries in mind."
+    },
+    {
+      icon: "fast",
+      title: "WhatsApp-based workflow",
+      text: "You do not need to visit an office to get started. Send documents from anywhere."
+    },
+    {
+      icon: "document",
+      title: "Pre-validation review",
+      text: "We flag issues with scans or missing stamps before they create delays for you."
+    }
+  ],
+  
+  accordionSections: [
+    {
+      title: "Where you will use your birth certificate translation",
+      id: "use-cases",
+      items: [
+        {
+          heading: "Visa, residency, and Emirates ID",
+          body: "<p>For many visa categories, a certified birth certificate translation is requested for dependants, newborn registration, or sponsorship transfers. ICP and GDRFA offices accept MOJ-certified translations that follow their formatting requirements.</p><p>Common scenarios include adding a child to a residence visa, Golden Visa family sponsorship, and updating Emirates ID records after a child is born abroad.</p>"
+        },
+        {
+          heading: "School and university admissions",
+          body: "<p>Schools and universities may ask for a legalized birth certificate translation when registering students from another country. International schools often require both the original and translated copy.</p><p>The translation must clearly show the child's full name, date of birth, and parents' names in Arabic to match other UAE documents.</p>"
+        },
+        {
+          heading: "Family status and name updates",
+          body: "<p>Used for updating names, correcting spellings, or completing civil status files with courts and notary publics. Dubai Courts and other judicial entities require MOJ-stamped translations.</p><p>If the birth certificate has marginal notes, corrections, or court decisions attached, these need to be translated as well.</p>"
+        }
+      ]
+    },
+    {
+      title: "Special cases and requirements",
+      id: "special-cases",
+      items: [
+        {
+          heading: "Baby born in the UAE",
+          body: "<p>When a baby is born in the UAE, the birth certificate is typically issued in Arabic (and sometimes English). We help you align the Arabic and English data, especially names, so they match passports and Emirates ID records.</p><p>This is particularly important when the name transliteration differs between the birth certificate and the parents' passports.</p>"
+        },
+        {
+          heading: "Baby born outside the UAE",
+          body: "<p>If the certificate is in a third language (not Arabic or English), we may use a two-step process: translating from the original language to English, then English to Arabic, depending on where you will submit it.</p><p>Documents from most countries need MOFA attestation before translation for UAE government use. We check this during our free pre-validation review.</p>"
+        },
+        {
+          heading: "Late registration and corrections",
+          body: "<p>Cases with late registration, corrections, marginal notes, or attached court decisions often need extra care. We highlight anything that may confuse authorities and reflect it properly in the translation.</p><p>If there are discrepancies between names or dates on different documents, we can help you understand what additional documentation may be needed.</p>"
+        },
+        {
+          heading: "Apostille and attestation requirements",
+          body: "<p>For GDRFA visa sponsorship and Golden Visa applications, the birth certificate typically needs attestation from your home country before translation. The standard chain is: home country authorities, home country Ministry of Foreign Affairs, UAE Embassy, then UAE MOFA.</p><p>We review each case individually and advise you before you spend money on translation that may not serve its purpose without proper attestation.</p>"
+        }
+      ]
+    }
+  ],
+  
   faqs: [
     {
       question: "Can I use a photo from my phone for birth certificate translation?",
@@ -125,45 +208,10 @@ const pageData = {
     </div>
   </section>
 
-  <!-- Process Section -->
+  <!-- Pricing Section -->
   <section class="section bg-white">
     <div class="container">
-      <h2>Our Translation Process</h2>
-      <p class="section-intro">Our process is designed to be transparent at every step. You will know exactly where your document is and when to expect updates.</p>
-      
-      <div class="timeline timeline--navy">
-        <div class="timeline-item">
-          <span class="timeline-title">Step 1: Digital Scan Review</span>
-          <p>You send us a photo or scan of your birth certificate via WhatsApp or email. We check for legibility, completeness, and the presence of required attestation stamps. If the image quality is insufficient or something appears to be missing, we will let you know immediately.</p>
-        </div>
-        
-        <div class="timeline-item">
-          <span class="timeline-title">Step 2: Quote & Payment</span>
-          <p>Once we confirm your document is ready for translation, we provide a fixed quote with no hidden fees. Payment is accepted via bank transfer or card. Translation begins immediately upon payment confirmation.</p>
-        </div>
-        
-        <div class="timeline-item">
-          <span class="timeline-title">Step 3: Translation & Quality Check</span>
-          <p>Our MOJ-licensed translator completes the Arabic translation. A second translator reviews for accuracy, formatting, and compliance with UAE government standards.</p>
-        </div>
-        
-        <div class="timeline-item">
-          <span class="timeline-title">Step 4: Digital Delivery</span>
-          <p>You receive the translated document as a PDF via WhatsApp and email. This digital copy is suitable for initial submissions while you await the physical copy.</p>
-        </div>
-        
-        <div class="timeline-item">
-          <span class="timeline-title">Step 5: Physical Delivery</span>
-          <p>The stamped, signed original is couriered to your address. Free delivery in Dubai; next-day delivery available to all Emirates.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing Section -->
-  <section class="section bg-light">
-    <div class="container">
-      <h2>Service Levels & Pricing</h2>
+      <h2>Service Levels and Pricing</h2>
       <p class="section-intro">Choose the service level that matches your timeline. All options include the same quality translation and MOJ certification.</p>
       
       <div class="pricing-grid">
@@ -301,16 +349,17 @@ const pageData = {
   }
   
   .pricing-card {
-    background: #ffffff;
+    background: #f8f9fa;
     border-radius: 1rem;
     padding: 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     text-align: center;
   }
   
   .pricing-card--featured {
     border-color: var(--accent-color);
     box-shadow: 0 8px 30px rgba(255, 22, 84, 0.15);
+    background: #ffffff;
   }
   
   .pricing-card h3 {

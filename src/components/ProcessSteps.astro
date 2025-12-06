@@ -1,0 +1,119 @@
+---
+interface Step {
+  number?: number;
+  title: string;
+  text: string;
+  icon?: string;
+}
+
+interface Props {
+  title?: string;
+  steps: Step[];
+}
+
+const { title = "How it works", steps } = Astro.props;
+---
+
+<section class="ot-process-section">
+  <div class="container">
+    <h2 class="ot-process-title">{title}</h2>
+    <div class="ot-process-grid">
+      {steps.map((step, i) => (
+        <div class="ot-process-card">
+          <div class="ot-process-number">{step.number || i + 1}</div>
+          <h3 class="ot-process-card-title">{step.title}</h3>
+          <p class="ot-process-card-text">{step.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .ot-process-section {
+    background: var(--bg-light, #f8f9fa);
+    padding: 4rem 0;
+  }
+  
+  .ot-process-title {
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--primary-color, #0E2B48);
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .ot-process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .ot-process-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ot-process-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ot-process-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--accent-color, #FF1654) 0%, #ff4d7a 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 auto 1.25rem;
+    box-shadow: 0 4px 16px rgba(255, 22, 84, 0.3);
+  }
+  
+  .ot-process-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color, #0E2B48);
+    margin-bottom: 0.75rem;
+  }
+  
+  .ot-process-card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted, #666);
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .ot-process-section {
+      padding: 3rem 0;
+    }
+    
+    .ot-process-grid {
+      gap: 1rem;
+    }
+    
+    .ot-process-card {
+      padding: 1.5rem 1.25rem;
+    }
+    
+    .ot-process-number {
+      width: 40px;
+      height: 40px;
+      font-size: 1.1rem;
+    }
+  }
+</style>

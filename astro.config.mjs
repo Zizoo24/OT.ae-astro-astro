@@ -5,14 +5,15 @@ export default defineConfig({
   output: 'static',
   server: {
     port: 5000,
-    host: true
+    host: '0.0.0.0'
   },
   build: {
     assets: 'assets'
   },
   vite: {
     server: {
-      allowedHosts: 'all',
+      host: '0.0.0.0',
+      allowedHosts: ['.replit.dev', '.repl.co', 'localhost'],
       hmr: false
     }
   }

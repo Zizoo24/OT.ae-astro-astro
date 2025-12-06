@@ -4383,13 +4383,26 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
 }
 
-.contact-btn.call {
+.contact-btn.call,
+.contact-btn.phone {
     background: rgba(255,255,255,0.15);
     color: var(--text-light);
     border: 2px solid rgba(255,255,255,0.3);
 }
 
-.contact-btn.call:hover {
+.contact-btn.call:hover,
+.contact-btn.phone:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+}
+
+.contact-btn.email {
+    background: rgba(255,255,255,0.15);
+    color: var(--text-light);
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.contact-btn.email:hover {
     background: rgba(255,255,255,0.25);
     transform: translateY(-3px);
 }

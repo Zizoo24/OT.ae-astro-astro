@@ -34,6 +34,7 @@ This document tracks all tasks for the project, organized by status.
 | Fix brand-suffix color | Restored coral (#FF1654) for ".ae" suffix in sidebar | Completed |
 | Add sidebar category links | Services, Personal, Corporate, Locations, Resources now link to category pages | Completed |
 | Separate accordion from links | Chevron toggles accordion, section title navigates to category page | Completed |
+| Fix Vercel CSS issues | Added .contact-btn.phone/.email styles, fixed dark section link colors | Completed |
 
 ---
 
@@ -79,7 +80,7 @@ This document tracks all tasks for the project, organized by status.
 - **Data pattern:** Service pages use `pageData` object passed to ServiceLayout
 
 ### Service Worker
-- **Current version:** v153
+- **Current version:** v154
 - **Bump version** after any CSS/JS changes to bust cache
 
 ### Mobile Sidebar Contrast (visibility-fixes.css)

@@ -35,7 +35,7 @@ The system is designed as a "Digital Concierge" with a "WhatsApp-First Architect
 - **Current Page Count:** 49 pages built (target: 55+).
 - **CSS Architecture:** CSS files served from `public/styles/` (not `src/styles/`). When editing CSS, update files in `public/styles/` directly. Key files: `porto-desktop.css` (base desktop styles), `navigation-glassmorphism.css` (header/nav styling), `sticky-mobile.css` (mobile bottom bar and sidebar), `visibility-fixes.css` (enforces dark navy sidebar background).
 - **Mobile Sidebar Contrast:** The sidebar background is forced to navy via `visibility-fixes.css` (`rgba(14, 43, 72, 0.98)`). All sidebar text must use light colors (`rgba(255, 255, 255, 0.7-0.92)`). Hover/active states use white text (#ffffff), not accent color, to meet WCAG AA contrast requirements (≥4.5:1 for text, ≥3:1 for icons).
-- **Service Worker:** Current version v153 in `public/service-worker.js`. Bump version after any CSS/JS changes to bust cache.
+- **Service Worker:** Current version v154 in `public/service-worker.js`. Bump version after any CSS/JS changes to bust cache.
 - **Sidebar Section Links:** Section titles (Services, Personal, etc.) are now clickable links to category pages. The chevron icon is a separate button that toggles the accordion submenu.
 - **Layout Components:** `BaseLayout.astro` (base HTML wrapper), `CategoryLayout.astro` (reusable category page structure with hero, breadcrumbs, and shared styles).
 - **Schema Markup:** Automatic generation for Service, Breadcrumb, and FAQ schemas via `ServiceLayout` component.

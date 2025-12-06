@@ -77,6 +77,15 @@
     color: rgba(255, 255, 255, 0.95);
 }
 
+/* Links in dark sections */
+.bg-dark a:not(.btn):not(.cta-btn):not(.contact-btn):not(.hero-cta):not(.exodus-cta) {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.bg-dark a:not(.btn):not(.cta-btn):not(.contact-btn):not(.hero-cta):not(.exodus-cta):hover {
+    color: #ffffff;
+}
+
 /* Service Snapshot - Hero bullet points */
 .service-snapshot {
     display: flex;

@@ -93,3 +93,37 @@ The system is designed as a "Digital Concierge" with a "WhatsApp-First Architect
 - **Content workflow:** Document pages defined as Astro files with front-matter for SEO and content structure
 - **Vercel:** Updated vercel.json with Astro build configuration
 - **CSS preserved:** All existing stylesheets (base-architecture.css, porto-desktop.css, etc.) imported as-is
+- **New GitHub repo:** OT.ae-astro-astro (clean Astro-only repo, excludes old static HTML)
+
+**Visual Relief Components - December 6, 2025:**
+- **Icon.astro:** SVG icon component with 20+ built-in icons (checkmark, clock, document, shield, court, etc.)
+- **TrustStrip.astro:** Horizontal bar with 3 trust signals, gold icons on navy background
+- **ProcessSteps.astro:** 3-step numbered cards with coral accents, configurable via array
+- **BenefitCards.astro:** Icon + heading + text grid, navy icon boxes on light cards
+- **AccordionSection.astro:** Collapsible content groups with JS toggle, single-open behavior
+
+**ServiceLayout Front-Matter Schema:**
+Required props:
+- `title`: Page title for SEO
+- `description`: Meta description
+- `heroTitle`: H1 heading
+- `heroIntro`: Intro paragraph
+- `snapshot`: Array of {icon, bold, text} for hero snapshot items
+- `breadcrumbs`: Array of {name, url} for breadcrumb navigation
+
+Optional props:
+- `heroSubtitle`: Coral accent subtitle
+- `keywords`: Meta keywords
+- `trustStrip`: Array of 3 trust signal strings
+- `processSteps`: Array of {title, text} for 3-step process
+- `benefitCards`: Array of {icon, title, text} for benefit grid
+- `accordionSections`: Array of {title, id, items: [{heading, body}]}
+- `faqs`: Array of {question, answer} for FAQ section
+
+**Created Document Pages (using ServiceLayout template):**
+- Birth certificate: /personal/vital-records/birth/
+- Marriage certificate: /personal/vital-records/marriage/
+- Divorce certificate: /personal/vital-records/divorce/
+- Death certificate: /personal/vital-records/death/
+- Degree certificate: /personal/education/degree/
+- Police clearance (PCC): /personal/immigration/pcc/

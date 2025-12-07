@@ -67,4 +67,4 @@ styles/
 images/
 
 # Old scripts
-scripts/
+# scripts/ - REMOVED: scripts are needed for the site to function

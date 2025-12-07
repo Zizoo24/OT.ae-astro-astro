@@ -389,28 +389,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Service Worker Registration with error handling
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/service-worker.js')
-                .then(function(registration) {
-                    console.log('ServiceWorker registered with scope:', registration.scope);
-                    
-                    // Check for updates
-                    registration.addEventListener('updatefound', function() {
-                        const newWorker = registration.installing;
-                        newWorker.addEventListener('statechange', function() {
-                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                console.log('New content available; please refresh.');
-                            }
-                        });
-                    });
-                })
-                .catch(function(err) {
-                    console.warn('ServiceWorker registration failed:', err.message);
-                });
-        });
-    }
+    
+
 
     // PWA Install Prompt
     let deferredPrompt;
